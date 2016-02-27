@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E3CD95851C82294D00A01D79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95841C82294D00A01D79 /* main.m */; };
+		E3CD95881C82294D00A01D79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95871C82294D00A01D79 /* AppDelegate.m */; };
+		E3CD958B1C82294D00A01D79 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD958A1C82294D00A01D79 /* ViewController.m */; };
+		E3CD958E1C82294D00A01D79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3CD958C1C82294D00A01D79 /* Main.storyboard */; };
+		E3CD95901C82294D00A01D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3CD958F1C82294D00A01D79 /* Assets.xcassets */; };
+		E3CD95931C82294D00A01D79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3CD95911C82294D00A01D79 /* LaunchScreen.storyboard */; };
+		E3CD959E1C82294D00A01D79 /* MerryGoRoundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD959D1C82294D00A01D79 /* MerryGoRoundTests.m */; };
+		E3CD95A91C82294D00A01D79 /* MerryGoRoundUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95A81C82294D00A01D79 /* MerryGoRoundUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E3CD959A1C82294D00A01D79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3CD95781C82294C00A01D79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3CD957F1C82294C00A01D79;
+			remoteInfo = MerryGoRound;
+		};
+		E3CD95A51C82294D00A01D79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3CD95781C82294C00A01D79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3CD957F1C82294C00A01D79;
+			remoteInfo = MerryGoRound;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E3CD95801C82294C00A01D79 /* MerryGoRound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MerryGoRound.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3CD95841C82294D00A01D79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E3CD95861C82294D00A01D79 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E3CD95871C82294D00A01D79 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E3CD95891C82294D00A01D79 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E3CD958A1C82294D00A01D79 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E3CD958D1C82294D00A01D79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E3CD958F1C82294D00A01D79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E3CD95921C82294D00A01D79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E3CD95941C82294D00A01D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3CD95991C82294D00A01D79 /* MerryGoRoundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MerryGoRoundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3CD959D1C82294D00A01D79 /* MerryGoRoundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerryGoRoundTests.m; sourceTree = "<group>"; };
+		E3CD959F1C82294D00A01D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3CD95A41C82294D00A01D79 /* MerryGoRoundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MerryGoRoundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3CD95A81C82294D00A01D79 /* MerryGoRoundUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerryGoRoundUITests.m; sourceTree = "<group>"; };
+		E3CD95AA1C82294D00A01D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E3CD957D1C82294C00A01D79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3CD95961C82294D00A01D79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3CD95A11C82294D00A01D79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E3CD95771C82294C00A01D79 = {
+			isa = PBXGroup;
+			children = (
+				E3CD95821C82294D00A01D79 /* MerryGoRound */,
+				E3CD959C1C82294D00A01D79 /* MerryGoRoundTests */,
+				E3CD95A71C82294D00A01D79 /* MerryGoRoundUITests */,
+				E3CD95811C82294D00A01D79 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E3CD95811C82294D00A01D79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E3CD95801C82294C00A01D79 /* MerryGoRound.app */,
+				E3CD95991C82294D00A01D79 /* MerryGoRoundTests.xctest */,
+				E3CD95A41C82294D00A01D79 /* MerryGoRoundUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E3CD95821C82294D00A01D79 /* MerryGoRound */ = {
+			isa = PBXGroup;
+			children = (
+				E3CD95861C82294D00A01D79 /* AppDelegate.h */,
+				E3CD95871C82294D00A01D79 /* AppDelegate.m */,
+				E3CD95891C82294D00A01D79 /* ViewController.h */,
+				E3CD958A1C82294D00A01D79 /* ViewController.m */,
+				E3CD958C1C82294D00A01D79 /* Main.storyboard */,
+				E3CD958F1C82294D00A01D79 /* Assets.xcassets */,
+				E3CD95911C82294D00A01D79 /* LaunchScreen.storyboard */,
+				E3CD95941C82294D00A01D79 /* Info.plist */,
+				E3CD95831C82294D00A01D79 /* Supporting Files */,
+			);
+			path = MerryGoRound;
+			sourceTree = "<group>";
+		};
+		E3CD95831C82294D00A01D79 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3CD95841C82294D00A01D79 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E3CD959C1C82294D00A01D79 /* MerryGoRoundTests */ = {
+			isa = PBXGroup;
+			children = (
+				E3CD959D1C82294D00A01D79 /* MerryGoRoundTests.m */,
+				E3CD959F1C82294D00A01D79 /* Info.plist */,
+			);
+			path = MerryGoRoundTests;
+			sourceTree = "<group>";
+		};
+		E3CD95A71C82294D00A01D79 /* MerryGoRoundUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E3CD95A81C82294D00A01D79 /* MerryGoRoundUITests.m */,
+				E3CD95AA1C82294D00A01D79 /* Info.plist */,
+			);
+			path = MerryGoRoundUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E3CD957F1C82294C00A01D79 /* MerryGoRound */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3CD95AD1C82294D00A01D79 /* Build configuration list for PBXNativeTarget "MerryGoRound" */;
+			buildPhases = (
+				E3CD957C1C82294C00A01D79 /* Sources */,
+				E3CD957D1C82294C00A01D79 /* Frameworks */,
+				E3CD957E1C82294C00A01D79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MerryGoRound;
+			productName = MerryGoRound;
+			productReference = E3CD95801C82294C00A01D79 /* MerryGoRound.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E3CD95981C82294D00A01D79 /* MerryGoRoundTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3CD95B01C82294D00A01D79 /* Build configuration list for PBXNativeTarget "MerryGoRoundTests" */;
+			buildPhases = (
+				E3CD95951C82294D00A01D79 /* Sources */,
+				E3CD95961C82294D00A01D79 /* Frameworks */,
+				E3CD95971C82294D00A01D79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3CD959B1C82294D00A01D79 /* PBXTargetDependency */,
+			);
+			name = MerryGoRoundTests;
+			productName = MerryGoRoundTests;
+			productReference = E3CD95991C82294D00A01D79 /* MerryGoRoundTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E3CD95A31C82294D00A01D79 /* MerryGoRoundUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3CD95B31C82294D00A01D79 /* Build configuration list for PBXNativeTarget "MerryGoRoundUITests" */;
+			buildPhases = (
+				E3CD95A01C82294D00A01D79 /* Sources */,
+				E3CD95A11C82294D00A01D79 /* Frameworks */,
+				E3CD95A21C82294D00A01D79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3CD95A61C82294D00A01D79 /* PBXTargetDependency */,
+			);
+			name = MerryGoRoundUITests;
+			productName = MerryGoRoundUITests;
+			productReference = E3CD95A41C82294D00A01D79 /* MerryGoRoundUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E3CD95781C82294C00A01D79 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Nikolay Morev";
+				TargetAttributes = {
+					E3CD957F1C82294C00A01D79 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = Y92UV48RZN;
+					};
+					E3CD95981C82294D00A01D79 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = Y92UV48RZN;
+						TestTargetID = E3CD957F1C82294C00A01D79;
+					};
+					E3CD95A31C82294D00A01D79 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = Y92UV48RZN;
+						TestTargetID = E3CD957F1C82294C00A01D79;
+					};
+				};
+			};
+			buildConfigurationList = E3CD957B1C82294C00A01D79 /* Build configuration list for PBXProject "MerryGoRound" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E3CD95771C82294C00A01D79;
+			productRefGroup = E3CD95811C82294D00A01D79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E3CD957F1C82294C00A01D79 /* MerryGoRound */,
+				E3CD95981C82294D00A01D79 /* MerryGoRoundTests */,
+				E3CD95A31C82294D00A01D79 /* MerryGoRoundUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E3CD957E1C82294C00A01D79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3CD95931C82294D00A01D79 /* LaunchScreen.storyboard in Resources */,
+				E3CD95901C82294D00A01D79 /* Assets.xcassets in Resources */,
+				E3CD958E1C82294D00A01D79 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3CD95971C82294D00A01D79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3CD95A21C82294D00A01D79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E3CD957C1C82294C00A01D79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3CD958B1C82294D00A01D79 /* ViewController.m in Sources */,
+				E3CD95881C82294D00A01D79 /* AppDelegate.m in Sources */,
+				E3CD95851C82294D00A01D79 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3CD95951C82294D00A01D79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3CD959E1C82294D00A01D79 /* MerryGoRoundTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3CD95A01C82294D00A01D79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3CD95A91C82294D00A01D79 /* MerryGoRoundUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E3CD959B1C82294D00A01D79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3CD957F1C82294C00A01D79 /* MerryGoRound */;
+			targetProxy = E3CD959A1C82294D00A01D79 /* PBXContainerItemProxy */;
+		};
+		E3CD95A61C82294D00A01D79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3CD957F1C82294C00A01D79 /* MerryGoRound */;
+			targetProxy = E3CD95A51C82294D00A01D79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E3CD958C1C82294D00A01D79 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3CD958D1C82294D00A01D79 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E3CD95911C82294D00A01D79 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3CD95921C82294D00A01D79 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E3CD95AB1C82294D00A01D79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E3CD95AC1C82294D00A01D79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E3CD95AE1C82294D00A01D79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MerryGoRound/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.mail.track.MerryGoRound;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E3CD95AF1C82294D00A01D79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MerryGoRound/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.mail.track.MerryGoRound;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E3CD95B11C82294D00A01D79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MerryGoRoundTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.mail.track.MerryGoRoundTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MerryGoRound.app/MerryGoRound";
+			};
+			name = Debug;
+		};
+		E3CD95B21C82294D00A01D79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MerryGoRoundTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.mail.track.MerryGoRoundTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MerryGoRound.app/MerryGoRound";
+			};
+			name = Release;
+		};
+		E3CD95B41C82294D00A01D79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MerryGoRoundUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.mail.track.MerryGoRoundUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MerryGoRound;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		E3CD95B51C82294D00A01D79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MerryGoRoundUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.mail.track.MerryGoRoundUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MerryGoRound;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E3CD957B1C82294C00A01D79 /* Build configuration list for PBXProject "MerryGoRound" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3CD95AB1C82294D00A01D79 /* Debug */,
+				E3CD95AC1C82294D00A01D79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3CD95AD1C82294D00A01D79 /* Build configuration list for PBXNativeTarget "MerryGoRound" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3CD95AE1C82294D00A01D79 /* Debug */,
+				E3CD95AF1C82294D00A01D79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E3CD95B01C82294D00A01D79 /* Build configuration list for PBXNativeTarget "MerryGoRoundTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3CD95B11C82294D00A01D79 /* Debug */,
+				E3CD95B21C82294D00A01D79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E3CD95B31C82294D00A01D79 /* Build configuration list for PBXNativeTarget "MerryGoRoundUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3CD95B41C82294D00A01D79 /* Debug */,
+				E3CD95B51C82294D00A01D79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E3CD95781C82294C00A01D79 /* Project object */;
+}
