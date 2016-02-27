@@ -13,8 +13,12 @@
 		E3CD958E1C82294D00A01D79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3CD958C1C82294D00A01D79 /* Main.storyboard */; };
 		E3CD95901C82294D00A01D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3CD958F1C82294D00A01D79 /* Assets.xcassets */; };
 		E3CD95931C82294D00A01D79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3CD95911C82294D00A01D79 /* LaunchScreen.storyboard */; };
-		E3CD959E1C82294D00A01D79 /* MerryGoRoundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD959D1C82294D00A01D79 /* MerryGoRoundTests.m */; };
 		E3CD95A91C82294D00A01D79 /* MerryGoRoundUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95A81C82294D00A01D79 /* MerryGoRoundUITests.m */; };
+		E3CD95BC1C822EF200A01D79 /* MGRFile.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95BB1C822EF200A01D79 /* MGRFile.m */; };
+		E3CD95BF1C822EFF00A01D79 /* MGRFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95BE1C822EFF00A01D79 /* MGRFolder.m */; };
+		E3CD95C31C822FC900A01D79 /* MGRNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95C21C822FC900A01D79 /* MGRNode.m */; };
+		E3CD95C51C8232BB00A01D79 /* list_folder.json in Resources */ = {isa = PBXBuildFile; fileRef = E3CD95C41C8232BB00A01D79 /* list_folder.json */; };
+		E3CD95C71C8232E200A01D79 /* MGRNodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95C61C8232E200A01D79 /* MGRNodeTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,11 +50,18 @@
 		E3CD95921C82294D00A01D79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3CD95941C82294D00A01D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3CD95991C82294D00A01D79 /* MerryGoRoundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MerryGoRoundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3CD959D1C82294D00A01D79 /* MerryGoRoundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerryGoRoundTests.m; sourceTree = "<group>"; };
 		E3CD959F1C82294D00A01D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3CD95A41C82294D00A01D79 /* MerryGoRoundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MerryGoRoundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3CD95A81C82294D00A01D79 /* MerryGoRoundUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerryGoRoundUITests.m; sourceTree = "<group>"; };
 		E3CD95AA1C82294D00A01D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3CD95BA1C822EF200A01D79 /* MGRFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRFile.h; sourceTree = "<group>"; };
+		E3CD95BB1C822EF200A01D79 /* MGRFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRFile.m; sourceTree = "<group>"; };
+		E3CD95BD1C822EFF00A01D79 /* MGRFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRFolder.h; sourceTree = "<group>"; };
+		E3CD95BE1C822EFF00A01D79 /* MGRFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRFolder.m; sourceTree = "<group>"; };
+		E3CD95C11C822FC900A01D79 /* MGRNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRNode.h; sourceTree = "<group>"; };
+		E3CD95C21C822FC900A01D79 /* MGRNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRNode.m; sourceTree = "<group>"; };
+		E3CD95C41C8232BB00A01D79 /* list_folder.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = list_folder.json; sourceTree = "<group>"; };
+		E3CD95C61C8232E200A01D79 /* MGRNodeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRNodeTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +112,7 @@
 		E3CD95821C82294D00A01D79 /* MerryGoRound */ = {
 			isa = PBXGroup;
 			children = (
+				E3CD95B61C822AB900A01D79 /* Model */,
 				E3CD95861C82294D00A01D79 /* AppDelegate.h */,
 				E3CD95871C82294D00A01D79 /* AppDelegate.m */,
 				E3CD95891C82294D00A01D79 /* ViewController.h */,
@@ -125,8 +137,9 @@
 		E3CD959C1C82294D00A01D79 /* MerryGoRoundTests */ = {
 			isa = PBXGroup;
 			children = (
-				E3CD959D1C82294D00A01D79 /* MerryGoRoundTests.m */,
 				E3CD959F1C82294D00A01D79 /* Info.plist */,
+				E3CD95C41C8232BB00A01D79 /* list_folder.json */,
+				E3CD95C61C8232E200A01D79 /* MGRNodeTests.m */,
 			);
 			path = MerryGoRoundTests;
 			sourceTree = "<group>";
@@ -138,6 +151,19 @@
 				E3CD95AA1C82294D00A01D79 /* Info.plist */,
 			);
 			path = MerryGoRoundUITests;
+			sourceTree = "<group>";
+		};
+		E3CD95B61C822AB900A01D79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E3CD95BA1C822EF200A01D79 /* MGRFile.h */,
+				E3CD95BB1C822EF200A01D79 /* MGRFile.m */,
+				E3CD95BD1C822EFF00A01D79 /* MGRFolder.h */,
+				E3CD95BE1C822EFF00A01D79 /* MGRFolder.m */,
+				E3CD95C11C822FC900A01D79 /* MGRNode.h */,
+				E3CD95C21C822FC900A01D79 /* MGRNode.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3CD95C51C8232BB00A01D79 /* list_folder.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +301,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3CD958B1C82294D00A01D79 /* ViewController.m in Sources */,
+				E3CD95BC1C822EF200A01D79 /* MGRFile.m in Sources */,
+				E3CD95C31C822FC900A01D79 /* MGRNode.m in Sources */,
 				E3CD95881C82294D00A01D79 /* AppDelegate.m in Sources */,
+				E3CD95BF1C822EFF00A01D79 /* MGRFolder.m in Sources */,
 				E3CD95851C82294D00A01D79 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,7 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3CD959E1C82294D00A01D79 /* MerryGoRoundTests.m in Sources */,
+				E3CD95C71C8232E200A01D79 /* MGRNodeTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
