@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MGRFolder (MGRDropboxParser)
 
 - (nullable instancetype)initWithJSONObject:(id)JSONObject
-                                 childNodes:(NSArray<MGRNode *> *)childNodes
+                                 childNodes:(NSArray<id<MGRNode>> *)childNodes
                                       error:(NSError * _Nullable *)error;
 
 @end

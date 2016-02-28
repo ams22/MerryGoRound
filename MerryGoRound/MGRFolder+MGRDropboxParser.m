@@ -11,7 +11,7 @@
 @implementation MGRFolder (MGRDropboxParser)
 
 - (instancetype)initWithJSONObject:(id)JSONObject
-                        childNodes:(NSArray<MGRNode *> *)childNodes
+                        childNodes:(NSArray<id<MGRNode>> *)childNodes
                              error:(NSError *__autoreleasing  _Nullable *)error {
     if (![JSONObject isKindOfClass:[NSDictionary class]]) {
         if (error) *error = [NSError errorWithDomain:MGRDropboxParserErrorDomain code:MGRDropboxParserErrorInvalidJSON userInfo:nil];

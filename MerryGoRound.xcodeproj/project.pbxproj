@@ -16,7 +16,7 @@
 		E3CD95A91C82294D00A01D79 /* MerryGoRoundUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95A81C82294D00A01D79 /* MerryGoRoundUITests.m */; };
 		E3CD95BC1C822EF200A01D79 /* MGRFile.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95BB1C822EF200A01D79 /* MGRFile.m */; };
 		E3CD95BF1C822EFF00A01D79 /* MGRFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95BE1C822EFF00A01D79 /* MGRFolder.m */; };
-		E3CD95C31C822FC900A01D79 /* MGRNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95C21C822FC900A01D79 /* MGRNode.m */; };
+		E3CD95C31C822FC900A01D79 /* MGRAbstractNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95C21C822FC900A01D79 /* MGRAbstractNode.m */; };
 		E3CD95C51C8232BB00A01D79 /* list_folder.json in Resources */ = {isa = PBXBuildFile; fileRef = E3CD95C41C8232BB00A01D79 /* list_folder.json */; };
 		E3CD95C71C8232E200A01D79 /* MGRNodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95C61C8232E200A01D79 /* MGRNodeTests.m */; };
 		E3CD95CA1C82E7AA00A01D79 /* MGRDropboxParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95C91C82E7AA00A01D79 /* MGRDropboxParser.m */; };
@@ -63,8 +63,8 @@
 		E3CD95BB1C822EF200A01D79 /* MGRFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRFile.m; sourceTree = "<group>"; };
 		E3CD95BD1C822EFF00A01D79 /* MGRFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRFolder.h; sourceTree = "<group>"; };
 		E3CD95BE1C822EFF00A01D79 /* MGRFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRFolder.m; sourceTree = "<group>"; };
-		E3CD95C11C822FC900A01D79 /* MGRNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRNode.h; sourceTree = "<group>"; };
-		E3CD95C21C822FC900A01D79 /* MGRNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRNode.m; sourceTree = "<group>"; };
+		E3CD95C11C822FC900A01D79 /* MGRAbstractNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRAbstractNode.h; sourceTree = "<group>"; };
+		E3CD95C21C822FC900A01D79 /* MGRAbstractNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRAbstractNode.m; sourceTree = "<group>"; };
 		E3CD95C41C8232BB00A01D79 /* list_folder.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = list_folder.json; sourceTree = "<group>"; };
 		E3CD95C61C8232E200A01D79 /* MGRNodeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRNodeTests.m; sourceTree = "<group>"; };
 		E3CD95C81C82E7AA00A01D79 /* MGRDropboxParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRDropboxParser.h; sourceTree = "<group>"; };
@@ -75,6 +75,7 @@
 		E3CD95CF1C82F5DD00A01D79 /* MGRFolder+MGRDropboxParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MGRFolder+MGRDropboxParser.m"; sourceTree = "<group>"; };
 		E3CD95D11C83025700A01D79 /* MGRDropboxParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRDropboxParserTests.m; sourceTree = "<group>"; };
 		E3CD95D31C8308B600A01D79 /* list_folder2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = list_folder2.json; sourceTree = "<group>"; };
+		E3CD95D51C830D1A00A01D79 /* MGRNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRNode.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +172,8 @@
 		E3CD95B61C822AB900A01D79 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E3CD95C11C822FC900A01D79 /* MGRAbstractNode.h */,
+				E3CD95C21C822FC900A01D79 /* MGRAbstractNode.m */,
 				E3CD95C81C82E7AA00A01D79 /* MGRDropboxParser.h */,
 				E3CD95C91C82E7AA00A01D79 /* MGRDropboxParser.m */,
 				E3CD95BA1C822EF200A01D79 /* MGRFile.h */,
@@ -181,8 +184,7 @@
 				E3CD95BE1C822EFF00A01D79 /* MGRFolder.m */,
 				E3CD95CE1C82F5DD00A01D79 /* MGRFolder+MGRDropboxParser.h */,
 				E3CD95CF1C82F5DD00A01D79 /* MGRFolder+MGRDropboxParser.m */,
-				E3CD95C11C822FC900A01D79 /* MGRNode.h */,
-				E3CD95C21C822FC900A01D79 /* MGRNode.m */,
+				E3CD95D51C830D1A00A01D79 /* MGRNode.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -325,7 +327,7 @@
 				E3CD95CA1C82E7AA00A01D79 /* MGRDropboxParser.m in Sources */,
 				E3CD958B1C82294D00A01D79 /* ViewController.m in Sources */,
 				E3CD95BC1C822EF200A01D79 /* MGRFile.m in Sources */,
-				E3CD95C31C822FC900A01D79 /* MGRNode.m in Sources */,
+				E3CD95C31C822FC900A01D79 /* MGRAbstractNode.m in Sources */,
 				E3CD95881C82294D00A01D79 /* AppDelegate.m in Sources */,
 				E3CD95BF1C822EFF00A01D79 /* MGRFolder.m in Sources */,
 				E3CD95D01C82F5DD00A01D79 /* MGRFolder+MGRDropboxParser.m in Sources */,

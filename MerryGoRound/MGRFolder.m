@@ -19,7 +19,7 @@
 - (instancetype)initWithDropboxID:(NSString *)dropboxID
                              name:(NSString *)name
                              path:(NSString *)path
-                       childNodes:(NSArray<MGRNode *> *)childNodes {
+                       childNodes:(NSArray<id<MGRNode>> *)childNodes {
     if (self = [super initWithDropboxID:dropboxID name:name path:path]) {
         _childNodes = [childNodes copy];
     }

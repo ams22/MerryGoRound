@@ -2,7 +2,7 @@
 //  MGRNode.h
 //  MerryGoRound
 //
-//  Created by Nikolay Morev on 27.02.16.
+//  Created by Nikolay Morev on 28.02.16.
 //  Copyright © 2016 Nikolay Morev. All rights reserved.
 //
 
@@ -10,18 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MGRNode : NSObject
-
-- (instancetype)initWithDropboxID:(NSString *)dropboxID
-                             name:(NSString *)name
-                             path:(NSString *)path NS_DESIGNATED_INITIALIZER;
-- (instancetype)init NS_UNAVAILABLE;
+@protocol MGRNode <NSObject>
 
 @property (nonatomic, readonly, copy) NSString *dropboxID;
 @property (nonatomic, readonly, copy) NSString *name;
 @property (nonatomic, readonly, copy) NSString *path;
-
-- (BOOL)isEqualToNode:(MGRNode *)node;
 
 @end
 

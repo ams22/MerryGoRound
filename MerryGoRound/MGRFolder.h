@@ -6,19 +6,18 @@
 //  Copyright © 2016 Nikolay Morev. All rights reserved.
 //
 
-#import "MGRNode.h"
-#import "MGRNode.h"
+#import "MGRAbstractNode.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MGRFolder : MGRNode
+@interface MGRFolder : MGRAbstractNode
 
 - (instancetype)initWithDropboxID:(NSString *)dropboxID
                              name:(NSString *)name
                              path:(NSString *)path
-                       childNodes:(NSArray<MGRNode *> *)childNodes NS_DESIGNATED_INITIALIZER;
+                       childNodes:(NSArray<id<MGRNode>> *)childNodes NS_DESIGNATED_INITIALIZER;
 
-@property (nonatomic, readonly, copy) NSArray<MGRNode *> *childNodes;
+@property (nonatomic, readonly, copy) NSArray<id<MGRNode>> *childNodes;
 
 @end
 

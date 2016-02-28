@@ -14,7 +14,7 @@ NSString *const MGRDropboxParserErrorDomain = @"MGRDropboxParserErrorDomain";
 
 @implementation MGRDropboxParser
 
-- (NSArray<MGRNode *> *)nodesFromJSONObject:(id)JSONObject error:(NSError * _Nullable *)error {
+- (NSArray<id<MGRNode>> *)nodesFromJSONObject:(id)JSONObject error:(NSError *__autoreleasing  _Nullable *)error {
     if (![JSONObject isKindOfClass:[NSDictionary class]]) {
         if (error) *error = [NSError errorWithDomain:MGRDropboxParserErrorDomain code:MGRDropboxParserErrorInvalidJSON userInfo:nil];
         return nil;
@@ -28,17 +28,17 @@ NSString *const MGRDropboxParserErrorDomain = @"MGRDropboxParserErrorDomain";
     }
     NSArray *entries = entriesObject;
 
-    NSArray<MGRNode *> *nodes = [self nodesFromEntries:entries path:nil fromIndex:0 count:NULL error:error];
+    NSArray<id<MGRNode>> *nodes = [self nodesFromEntries:entries path:nil fromIndex:0 count:NULL error:error];
 
     return nodes;
 }
 
-- (NSArray<MGRNode *> *)nodesFromEntries:(NSArray *)entries
+- (NSArray<id<MGRNode>> *)nodesFromEntries:(NSArray *)entries
                                     path:(NSString *)filterPath
                                fromIndex:(NSUInteger)fromIndex
                                    count:(NSUInteger *)countOut
                                    error:(NSError **)error {
-    NSMutableArray<MGRNode *> *nodes = [NSMutableArray array];
+    NSMutableArray<id<MGRNode>> *nodes = [NSMutableArray array];
     NSUInteger idx = fromIndex;
     while (idx < entries.count) {
         id entryObject = entries[idx];
@@ -75,7 +75,7 @@ NSString *const MGRDropboxParserErrorDomain = @"MGRDropboxParserErrorDomain";
         }
         else if ([tag isEqualToString:@"folder"]) {
             NSUInteger count = 0;
-            NSArray<MGRNode *> *childNodes = [self nodesFromEntries:entries path:path fromIndex:idx + 1 count:&count error:error];
+            NSArray<id<MGRNode>> *childNodes = [self nodesFromEntries:entries path:path fromIndex:idx + 1 count:&count error:error];
             if (!childNodes) {
                 return nil;
             }

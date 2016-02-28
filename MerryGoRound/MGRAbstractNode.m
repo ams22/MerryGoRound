@@ -1,14 +1,18 @@
 //
-//  MGRNode.m
+//  MGRAbstractNode.m
 //  MerryGoRound
 //
 //  Created by Nikolay Morev on 27.02.16.
 //  Copyright © 2016 Nikolay Morev. All rights reserved.
 //
 
-#import "MGRNode.h"
+#import "MGRAbstractNode.h"
 
-@implementation MGRNode
+@implementation MGRAbstractNode
+
+@synthesize dropboxID = _dropboxID;
+@synthesize name = _name;
+@synthesize path = _path;
 
 - (instancetype)initWithDropboxID:(NSString *)dropboxID
                              name:(NSString *)name
@@ -31,7 +35,7 @@
     return self.dropboxID.hash ^ self.name.hash ^ self.path.hash;
 }
 
-- (BOOL)isEqualToNode:(MGRNode *)node {
+- (BOOL)isEqualToNode:(MGRAbstractNode *)node {
     if (!node) {
         return NO;
     }
@@ -44,10 +48,10 @@
     if (self == object) {
         return YES;
     }
-    if (![object isKindOfClass:[MGRNode class]]) {
+    if (![object isKindOfClass:[MGRAbstractNode class]]) {
         return NO;
     }
-    return [self isEqualToNode:(MGRNode *)object];
+    return [self isEqualToNode:(MGRAbstractNode *)object];
 }
 
 - (NSString *)description {

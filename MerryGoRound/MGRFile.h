@@ -6,11 +6,11 @@
 //  Copyright © 2016 Nikolay Morev. All rights reserved.
 //
 
-#import "MGRNode.h"
+#import "MGRAbstractNode.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MGRFile : MGRNode
+@interface MGRFile : MGRAbstractNode
 
 - (instancetype)initWithDropboxID:(NSString *)dropboxID
                              name:(NSString *)name

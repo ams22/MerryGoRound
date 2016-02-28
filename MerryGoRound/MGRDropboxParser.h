@@ -19,7 +19,14 @@ typedef NS_ENUM(NSUInteger, MGRDropboxParserError) {
 
 @interface MGRDropboxParser : NSObject
 
-- (nullable NSArray<MGRNode *> *)nodesFromJSONObject:(id)JSONObject error:(NSError * _Nullable *)error;
+/**
+ Преобразует распаршеный JSON-объект в иерархию файлов и папок.
+ 
+ @param JSONObject JSON-объект
+ @param error ошибка парсинга
+ @return массив файлов и папок или nil в случае ошибки
+ */
+- (nullable NSArray<id<MGRNode>> *)nodesFromJSONObject:(id)JSONObject error:(NSError * _Nullable *)error;
 
 @end
 
