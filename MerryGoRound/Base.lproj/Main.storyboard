@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
@@ -15,11 +16,170 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app-logo" translatesAutoresizingMaskIntoConstraints="NO" id="ich-gm-2Za">
+                                <rect key="frame" x="20" y="28" width="250" height="167"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="user@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ysf-pr-2iD">
+                                <rect key="frame" x="20" y="203" width="250" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passw0rd" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="15w-pU-1R9">
+                                <rect key="frame" x="20" y="241" width="250" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cce-hB-bU9">
+                                <rect key="frame" x="123" y="279" width="44" height="30"/>
+                                <state key="normal" title="Войти"/>
+                                <connections>
+                                    <segue destination="SHw-Se-gxr" kind="presentation" id="AFM-CM-cXH"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="227" y="339"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Rrc-ij-18Z">
+            <objects>
+                <navigationController id="SHw-Se-gxr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y6s-7U-FaN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="14w-x0-s0V" kind="relationship" relationship="rootViewController" id="Rih-pU-p9B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LCl-pN-V80" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975" y="339"/>
+        </scene>
+        <!--Photos-->
+        <scene sceneID="mIx-qX-bQA">
+            <objects>
+                <viewController title="Photos" id="14w-x0-s0V" customClass="MGRListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AKI-YH-NWT"/>
+                        <viewControllerLayoutGuide type="bottom" id="TlS-UO-Es2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WLQ-JJ-r7l">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app-logo" translatesAutoresizingMaskIntoConstraints="NO" id="7kS-h5-Gip">
+                                <rect key="frame" x="20" y="72" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app-logo" translatesAutoresizingMaskIntoConstraints="NO" id="5Ha-YZ-KLa">
+                                <rect key="frame" x="20" y="208" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app-logo" translatesAutoresizingMaskIntoConstraints="NO" id="ere-QV-4JI">
+                                <rect key="frame" x="268" y="72" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app-logo" translatesAutoresizingMaskIntoConstraints="NO" id="XP6-TX-HOO">
+                                <rect key="frame" x="268" y="208" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9t-Qm-5bX">
+                                <rect key="frame" x="275" y="215" width="61" height="30"/>
+                                <state key="normal" title="Открыть"/>
+                                <connections>
+                                    <segue destination="GWO-DJ-g0k" kind="show" id="SNj-ue-T1y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itc-P6-aXG">
+                                <rect key="frame" x="20" y="344" width="97" height="30"/>
+                                <state key="normal" title="О программе"/>
+                                <connections>
+                                    <segue destination="R4Y-Ey-PDR" kind="presentation" id="5zU-Fe-D81"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Фоточки" id="ZtA-QD-0cw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h7g-nO-EyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1705" y="339"/>
+        </scene>
+        <!--О программе-->
+        <scene sceneID="HIo-es-VuU">
+            <objects>
+                <viewController title="О программе" id="R4Y-Ey-PDR" customClass="MGRAboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bbo-KV-m9I"/>
+                        <viewControllerLayoutGuide type="bottom" id="M1r-NS-eon"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OnD-0m-OG7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifu-0H-JsI">
+                                <rect key="frame" x="20" y="28" width="60" height="30"/>
+                                <state key="normal" title="Закрыть"/>
+                                <connections>
+                                    <segue destination="Aa0-KG-1dz" kind="unwind" unwindAction="unwindToList:" id="RTP-id-8td"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HWJ-hJ-TgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Aa0-KG-1dz" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2083" y="1130"/>
+        </scene>
+        <!--Одна фоточка-->
+        <scene sceneID="7Rb-l3-pQL">
+            <objects>
+                <viewController title="Одна фоточка" id="GWO-DJ-g0k" customClass="MGRSinglePhotoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kwy-gN-YRZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="U6U-iT-bVr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d0W-ve-jbk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app-logo" translatesAutoresizingMaskIntoConstraints="NO" id="B77-8P-gOU">
+                                <rect key="frame" x="20" y="72" width="250" height="167"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2b-8v-24p">
+                                <rect key="frame" x="20" y="247" width="131" height="30"/>
+                                <state key="normal" title="Открыть панельку"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZH9-IW-VdU">
+                                <rect key="frame" x="20" y="285" width="79" height="30"/>
+                                <state key="normal" title="Расшарить"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5L-a3-Y0S">
+                                <rect key="frame" x="20" y="323" width="97" height="30"/>
+                                <state key="normal" title="О программе"/>
+                                <connections>
+                                    <segue destination="R4Y-Ey-PDR" kind="presentation" id="Vbe-Yx-VfB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Одна фоточка" id="yMJ-zM-Wp9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zjn-PE-8fH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2459" y="339"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="app-logo" width="250" height="167"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="5zU-Fe-D81"/>
+    </inferredMetricsTieBreakers>
 </document>

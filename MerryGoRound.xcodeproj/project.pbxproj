@@ -28,6 +28,9 @@
 		E3298BF21C8DCA0100D337FB /* large-picture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E3298BB31C8C62CA00D337FB /* large-picture.jpg */; };
 		E3298BF31C8DCA0A00D337FB /* list_folder.json in Resources */ = {isa = PBXBuildFile; fileRef = E3CD95C41C8232BB00A01D79 /* list_folder.json */; };
 		E3298BF41C8DCAA300D337FB /* MGRMemoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298BCC1C8CC1D100D337FB /* MGRMemoryTest.m */; };
+		E3298BF81C8DCEAB00D337FB /* MGRListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298BF71C8DCEAB00D337FB /* MGRListViewController.m */; };
+		E3298BFB1C8DCF0100D337FB /* MGRSinglePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298BFA1C8DCF0100D337FB /* MGRSinglePhotoViewController.m */; };
+		E3298BFE1C8DCF1000D337FB /* MGRAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298BFD1C8DCF1000D337FB /* MGRAboutViewController.m */; };
 		E3CD95851C82294D00A01D79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95841C82294D00A01D79 /* main.m */; };
 		E3CD95881C82294D00A01D79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95871C82294D00A01D79 /* AppDelegate.m */; };
 		E3CD958B1C82294D00A01D79 /* MGRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD958A1C82294D00A01D79 /* MGRLoginViewController.m */; };
@@ -115,6 +118,12 @@
 		E3298BDA1C8D83A100D337FB /* NSString+SwizzleDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SwizzleDescription.m"; sourceTree = "<group>"; };
 		E3298BE01C8DC89400D337FB /* MerryGoRoundPlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MerryGoRoundPlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3298BE41C8DC89400D337FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3298BF61C8DCEAB00D337FB /* MGRListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRListViewController.h; sourceTree = "<group>"; };
+		E3298BF71C8DCEAB00D337FB /* MGRListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRListViewController.m; sourceTree = "<group>"; };
+		E3298BF91C8DCF0100D337FB /* MGRSinglePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRSinglePhotoViewController.h; sourceTree = "<group>"; };
+		E3298BFA1C8DCF0100D337FB /* MGRSinglePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRSinglePhotoViewController.m; sourceTree = "<group>"; };
+		E3298BFC1C8DCF1000D337FB /* MGRAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRAboutViewController.h; sourceTree = "<group>"; };
+		E3298BFD1C8DCF1000D337FB /* MGRAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRAboutViewController.m; sourceTree = "<group>"; };
 		E3CD95801C82294C00A01D79 /* MerryGoRound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MerryGoRound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3CD95841C82294D00A01D79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E3CD95861C82294D00A01D79 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -244,6 +253,21 @@
 			path = MerryGoRoundPlaygroundTests;
 			sourceTree = "<group>";
 		};
+		E3298BF51C8DCE7B00D337FB /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E3298BFC1C8DCF1000D337FB /* MGRAboutViewController.h */,
+				E3298BFD1C8DCF1000D337FB /* MGRAboutViewController.m */,
+				E3298BF61C8DCEAB00D337FB /* MGRListViewController.h */,
+				E3298BF71C8DCEAB00D337FB /* MGRListViewController.m */,
+				E3CD95891C82294D00A01D79 /* MGRLoginViewController.h */,
+				E3CD958A1C82294D00A01D79 /* MGRLoginViewController.m */,
+				E3298BF91C8DCF0100D337FB /* MGRSinglePhotoViewController.h */,
+				E3298BFA1C8DCF0100D337FB /* MGRSinglePhotoViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		E3CD95771C82294C00A01D79 = {
 			isa = PBXGroup;
 			children = (
@@ -271,10 +295,9 @@
 			isa = PBXGroup;
 			children = (
 				E3CD95B61C822AB900A01D79 /* Model */,
+				E3298BF51C8DCE7B00D337FB /* View Controllers */,
 				E3CD95861C82294D00A01D79 /* AppDelegate.h */,
 				E3CD95871C82294D00A01D79 /* AppDelegate.m */,
-				E3CD95891C82294D00A01D79 /* MGRLoginViewController.h */,
-				E3CD958A1C82294D00A01D79 /* MGRLoginViewController.m */,
 				E3CD958C1C82294D00A01D79 /* Main.storyboard */,
 				E3CD958F1C82294D00A01D79 /* Assets.xcassets */,
 				E3CD95911C82294D00A01D79 /* LaunchScreen.storyboard */,
@@ -526,8 +549,11 @@
 				E3CD958B1C82294D00A01D79 /* MGRLoginViewController.m in Sources */,
 				E3298BA51C8C2A5800D337FB /* EXTConcreteProtocol.m in Sources */,
 				E3CD95BC1C822EF200A01D79 /* MGRFile.m in Sources */,
+				E3298BF81C8DCEAB00D337FB /* MGRListViewController.m in Sources */,
+				E3298BFB1C8DCF0100D337FB /* MGRSinglePhotoViewController.m in Sources */,
 				E3298BA81C8C2A5800D337FB /* EXTSafeCategory.m in Sources */,
 				E3298BAF1C8C3B8900D337FB /* MGRNodesManager.m in Sources */,
+				E3298BFE1C8DCF1000D337FB /* MGRAboutViewController.m in Sources */,
 				E3CD95C31C822FC900A01D79 /* MGRAbstractNode.m in Sources */,
 				E3CD95881C82294D00A01D79 /* AppDelegate.m in Sources */,
 				E3298BAC1C8C2A5800D337FB /* NSMethodSignature+EXT.m in Sources */,
