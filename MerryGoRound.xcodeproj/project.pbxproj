@@ -30,7 +30,7 @@
 		E3298BF41C8DCAA300D337FB /* MGRMemoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298BCC1C8CC1D100D337FB /* MGRMemoryTest.m */; };
 		E3CD95851C82294D00A01D79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95841C82294D00A01D79 /* main.m */; };
 		E3CD95881C82294D00A01D79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95871C82294D00A01D79 /* AppDelegate.m */; };
-		E3CD958B1C82294D00A01D79 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD958A1C82294D00A01D79 /* ViewController.m */; };
+		E3CD958B1C82294D00A01D79 /* MGRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD958A1C82294D00A01D79 /* MGRLoginViewController.m */; };
 		E3CD958E1C82294D00A01D79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3CD958C1C82294D00A01D79 /* Main.storyboard */; };
 		E3CD95901C82294D00A01D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3CD958F1C82294D00A01D79 /* Assets.xcassets */; };
 		E3CD95931C82294D00A01D79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3CD95911C82294D00A01D79 /* LaunchScreen.storyboard */; };
@@ -119,8 +119,8 @@
 		E3CD95841C82294D00A01D79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E3CD95861C82294D00A01D79 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E3CD95871C82294D00A01D79 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E3CD95891C82294D00A01D79 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E3CD958A1C82294D00A01D79 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E3CD95891C82294D00A01D79 /* MGRLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGRLoginViewController.h; sourceTree = "<group>"; };
+		E3CD958A1C82294D00A01D79 /* MGRLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGRLoginViewController.m; sourceTree = "<group>"; };
 		E3CD958D1C82294D00A01D79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3CD958F1C82294D00A01D79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3CD95921C82294D00A01D79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -273,8 +273,8 @@
 				E3CD95B61C822AB900A01D79 /* Model */,
 				E3CD95861C82294D00A01D79 /* AppDelegate.h */,
 				E3CD95871C82294D00A01D79 /* AppDelegate.m */,
-				E3CD95891C82294D00A01D79 /* ViewController.h */,
-				E3CD958A1C82294D00A01D79 /* ViewController.m */,
+				E3CD95891C82294D00A01D79 /* MGRLoginViewController.h */,
+				E3CD958A1C82294D00A01D79 /* MGRLoginViewController.m */,
 				E3CD958C1C82294D00A01D79 /* Main.storyboard */,
 				E3CD958F1C82294D00A01D79 /* Assets.xcassets */,
 				E3CD95911C82294D00A01D79 /* LaunchScreen.storyboard */,
@@ -523,7 +523,7 @@
 				E3CD95CA1C82E7AA00A01D79 /* MGRDropboxParser.m in Sources */,
 				E3298BA71C8C2A5800D337FB /* EXTRuntimeExtensions.m in Sources */,
 				E3298BA41C8C2A5800D337FB /* EXTADT.m in Sources */,
-				E3CD958B1C82294D00A01D79 /* ViewController.m in Sources */,
+				E3CD958B1C82294D00A01D79 /* MGRLoginViewController.m in Sources */,
 				E3298BA51C8C2A5800D337FB /* EXTConcreteProtocol.m in Sources */,
 				E3CD95BC1C822EF200A01D79 /* MGRFile.m in Sources */,
 				E3298BA81C8C2A5800D337FB /* EXTSafeCategory.m in Sources */,

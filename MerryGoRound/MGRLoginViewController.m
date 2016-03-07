@@ -1,26 +1,26 @@
 //
-//  ViewController.m
+//  MGRLoginViewController.m
 //  MerryGoRound
 //
 //  Created by Nikolay Morev on 27.02.16.
 //  Copyright © 2016 Nikolay Morev. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MGRLoginViewController.h"
 #import "MGRNodesManager.h"
 #import "EXTScope.h"
 #import "EXTKeyPathCoding.h"
 
 //static void *const NodesManagerDidUpdateNodesObservationContext = &NodesManagerDidUpdateNodesObservationContext;
 
-@interface ViewController ()
+@interface MGRLoginViewController ()
 //<MGRNodesManagerDelegate>
 
 @property (nonatomic, strong) MGRNodesManager *nodesManager;
 
 @end
 
-@implementation ViewController
+@implementation MGRLoginViewController
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MGRLoginViewController.h
 //  MerryGoRound
 //
 //  Created by Nikolay Morev on 27.02.16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MGRLoginViewController : UIViewController
 
 
 @end
