@@ -94,7 +94,10 @@
     NSLog(@"target = %@", targetOusideAutoreleasePool);
 
     id expectation = [self expectationWithDescription:@"Wait 5 seconds"];
-    [self waitForExpectationsWithTimeout:5 handler:nil];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [expectation fulfill];
+    });
+    [self waitForExpectationsWithTimeout:10 handler:nil];
 }
 
 - (void)testDanglingPointer {
@@ -128,7 +131,7 @@
 }
 
 - (void)testAccidentalMemoryUsage2 {
-    for (NSInteger idx = 0; idx < NSIntegerMax; idx++) {
+    for (NSInteger idx = 0; idx < 100; idx++) {
 //        NSString *string = [[NSString alloc] initWithFormat:@"asldjalsjdlasd %li", (long)idx];
         NSString *string = [NSString stringWithFormat:@"asldjalsjdlasd %li", (long)idx];
         NSLog(@"%@", string);
