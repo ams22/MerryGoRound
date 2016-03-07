@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3298BA41C8C2A5800D337FB /* EXTADT.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B8D1C8C2A5800D337FB /* EXTADT.m */; };
+		E3298BA51C8C2A5800D337FB /* EXTConcreteProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B8F1C8C2A5800D337FB /* EXTConcreteProtocol.m */; };
+		E3298BA61C8C2A5800D337FB /* EXTNil.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B931C8C2A5800D337FB /* EXTNil.m */; };
+		E3298BA71C8C2A5800D337FB /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B971C8C2A5800D337FB /* EXTRuntimeExtensions.m */; };
+		E3298BA81C8C2A5800D337FB /* EXTSafeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B991C8C2A5800D337FB /* EXTSafeCategory.m */; };
+		E3298BA91C8C2A5800D337FB /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B9B1C8C2A5800D337FB /* EXTScope.m */; };
+		E3298BAA1C8C2A5800D337FB /* EXTSelectorChecking.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B9D1C8C2A5800D337FB /* EXTSelectorChecking.m */; };
+		E3298BAB1C8C2A5800D337FB /* NSInvocation+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298BA11C8C2A5800D337FB /* NSInvocation+EXT.m */; };
+		E3298BAC1C8C2A5800D337FB /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298BA31C8C2A5800D337FB /* NSMethodSignature+EXT.m */; };
 		E3CD95851C82294D00A01D79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95841C82294D00A01D79 /* main.m */; };
 		E3CD95881C82294D00A01D79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95871C82294D00A01D79 /* AppDelegate.m */; };
 		E3CD958B1C82294D00A01D79 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD958A1C82294D00A01D79 /* ViewController.m */; };
@@ -44,6 +53,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E3298B8C1C8C2A5800D337FB /* EXTADT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTADT.h; sourceTree = "<group>"; };
+		E3298B8D1C8C2A5800D337FB /* EXTADT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTADT.m; sourceTree = "<group>"; };
+		E3298B8E1C8C2A5800D337FB /* EXTConcreteProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTConcreteProtocol.h; sourceTree = "<group>"; };
+		E3298B8F1C8C2A5800D337FB /* EXTConcreteProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTConcreteProtocol.m; sourceTree = "<group>"; };
+		E3298B901C8C2A5800D337FB /* EXTCoroutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTCoroutine.h; sourceTree = "<group>"; };
+		E3298B911C8C2A5800D337FB /* EXTKeyPathCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTKeyPathCoding.h; sourceTree = "<group>"; };
+		E3298B921C8C2A5800D337FB /* EXTNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTNil.h; sourceTree = "<group>"; };
+		E3298B931C8C2A5800D337FB /* EXTNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTNil.m; sourceTree = "<group>"; };
+		E3298B941C8C2A5800D337FB /* extobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = extobjc.h; sourceTree = "<group>"; };
+		E3298B951C8C2A5800D337FB /* extobjc_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = extobjc_Prefix.pch; sourceTree = "<group>"; };
+		E3298B961C8C2A5800D337FB /* EXTRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTRuntimeExtensions.h; sourceTree = "<group>"; };
+		E3298B971C8C2A5800D337FB /* EXTRuntimeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTRuntimeExtensions.m; sourceTree = "<group>"; };
+		E3298B981C8C2A5800D337FB /* EXTSafeCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTSafeCategory.h; sourceTree = "<group>"; };
+		E3298B991C8C2A5800D337FB /* EXTSafeCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTSafeCategory.m; sourceTree = "<group>"; };
+		E3298B9A1C8C2A5800D337FB /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
+		E3298B9B1C8C2A5800D337FB /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTScope.m; sourceTree = "<group>"; };
+		E3298B9C1C8C2A5800D337FB /* EXTSelectorChecking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTSelectorChecking.h; sourceTree = "<group>"; };
+		E3298B9D1C8C2A5800D337FB /* EXTSelectorChecking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTSelectorChecking.m; sourceTree = "<group>"; };
+		E3298B9E1C8C2A5800D337FB /* EXTSynthesize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTSynthesize.h; sourceTree = "<group>"; };
+		E3298B9F1C8C2A5800D337FB /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
+		E3298BA01C8C2A5800D337FB /* NSInvocation+EXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+EXT.h"; sourceTree = "<group>"; };
+		E3298BA11C8C2A5800D337FB /* NSInvocation+EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+EXT.m"; sourceTree = "<group>"; };
+		E3298BA21C8C2A5800D337FB /* NSMethodSignature+EXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMethodSignature+EXT.h"; sourceTree = "<group>"; };
+		E3298BA31C8C2A5800D337FB /* NSMethodSignature+EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMethodSignature+EXT.m"; sourceTree = "<group>"; };
 		E3CD95801C82294C00A01D79 /* MerryGoRound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MerryGoRound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3CD95841C82294D00A01D79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E3CD95861C82294D00A01D79 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -103,12 +136,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E3298B8A1C8C2A2A00D337FB /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				E3298B8B1C8C2A5800D337FB /* extobjc */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		E3298B8B1C8C2A5800D337FB /* extobjc */ = {
+			isa = PBXGroup;
+			children = (
+				E3298B8C1C8C2A5800D337FB /* EXTADT.h */,
+				E3298B8D1C8C2A5800D337FB /* EXTADT.m */,
+				E3298B8E1C8C2A5800D337FB /* EXTConcreteProtocol.h */,
+				E3298B8F1C8C2A5800D337FB /* EXTConcreteProtocol.m */,
+				E3298B901C8C2A5800D337FB /* EXTCoroutine.h */,
+				E3298B911C8C2A5800D337FB /* EXTKeyPathCoding.h */,
+				E3298B921C8C2A5800D337FB /* EXTNil.h */,
+				E3298B931C8C2A5800D337FB /* EXTNil.m */,
+				E3298B941C8C2A5800D337FB /* extobjc.h */,
+				E3298B951C8C2A5800D337FB /* extobjc_Prefix.pch */,
+				E3298B961C8C2A5800D337FB /* EXTRuntimeExtensions.h */,
+				E3298B971C8C2A5800D337FB /* EXTRuntimeExtensions.m */,
+				E3298B981C8C2A5800D337FB /* EXTSafeCategory.h */,
+				E3298B991C8C2A5800D337FB /* EXTSafeCategory.m */,
+				E3298B9A1C8C2A5800D337FB /* EXTScope.h */,
+				E3298B9B1C8C2A5800D337FB /* EXTScope.m */,
+				E3298B9C1C8C2A5800D337FB /* EXTSelectorChecking.h */,
+				E3298B9D1C8C2A5800D337FB /* EXTSelectorChecking.m */,
+				E3298B9E1C8C2A5800D337FB /* EXTSynthesize.h */,
+				E3298B9F1C8C2A5800D337FB /* metamacros.h */,
+				E3298BA01C8C2A5800D337FB /* NSInvocation+EXT.h */,
+				E3298BA11C8C2A5800D337FB /* NSInvocation+EXT.m */,
+				E3298BA21C8C2A5800D337FB /* NSMethodSignature+EXT.h */,
+				E3298BA31C8C2A5800D337FB /* NSMethodSignature+EXT.m */,
+			);
+			name = extobjc;
+			path = libextobjc/extobjc;
+			sourceTree = "<group>";
+		};
 		E3CD95771C82294C00A01D79 = {
 			isa = PBXGroup;
 			children = (
 				E3CD95821C82294D00A01D79 /* MerryGoRound */,
 				E3CD959C1C82294D00A01D79 /* MerryGoRoundTests */,
 				E3CD95A71C82294D00A01D79 /* MerryGoRoundUITests */,
+				E3298B8A1C8C2A2A00D337FB /* ThirdParty */,
 				E3CD95811C82294D00A01D79 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -324,15 +398,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3298BA91C8C2A5800D337FB /* EXTScope.m in Sources */,
 				E3CD95CA1C82E7AA00A01D79 /* MGRDropboxParser.m in Sources */,
+				E3298BA71C8C2A5800D337FB /* EXTRuntimeExtensions.m in Sources */,
+				E3298BA41C8C2A5800D337FB /* EXTADT.m in Sources */,
 				E3CD958B1C82294D00A01D79 /* ViewController.m in Sources */,
+				E3298BA51C8C2A5800D337FB /* EXTConcreteProtocol.m in Sources */,
 				E3CD95BC1C822EF200A01D79 /* MGRFile.m in Sources */,
+				E3298BA81C8C2A5800D337FB /* EXTSafeCategory.m in Sources */,
 				E3CD95C31C822FC900A01D79 /* MGRAbstractNode.m in Sources */,
 				E3CD95881C82294D00A01D79 /* AppDelegate.m in Sources */,
+				E3298BAC1C8C2A5800D337FB /* NSMethodSignature+EXT.m in Sources */,
 				E3CD95BF1C822EFF00A01D79 /* MGRFolder.m in Sources */,
 				E3CD95D01C82F5DD00A01D79 /* MGRFolder+MGRDropboxParser.m in Sources */,
 				E3CD95851C82294D00A01D79 /* main.m in Sources */,
 				E3CD95CD1C82F20A00A01D79 /* MGRFile+MGRDropboxParser.m in Sources */,
+				E3298BAA1C8C2A5800D337FB /* EXTSelectorChecking.m in Sources */,
+				E3298BA61C8C2A5800D337FB /* EXTNil.m in Sources */,
+				E3298BAB1C8C2A5800D337FB /* NSInvocation+EXT.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
