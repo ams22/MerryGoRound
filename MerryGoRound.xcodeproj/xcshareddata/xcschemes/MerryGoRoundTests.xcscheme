@@ -22,6 +22,16 @@
                ReferencedContainer = "container:MerryGoRound.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E3298BDF1C8DC89400D337FB"
+               BuildableName = "MerryGoRoundPlaygroundTests.xctest"
+               BlueprintName = "MerryGoRoundPlaygroundTests"
+               ReferencedContainer = "container:MerryGoRound.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <AdditionalOptions>
       </AdditionalOptions>
