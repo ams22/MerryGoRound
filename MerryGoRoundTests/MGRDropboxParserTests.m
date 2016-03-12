@@ -26,7 +26,7 @@
     NSArray<id<MGRNode>> *nodes = [self.parser nodesFromJSONObject:JSONObject error:&error];
     XCTAssertNotNil(nodes, @"%@", error);
 
-    NSLog(@"%@", nodes);
+//    NSLog(@"%@", nodes);
 }
 
 - (id)listFolderJSONObject {

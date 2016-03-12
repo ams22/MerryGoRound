@@ -28,14 +28,16 @@
 - (void)testFileDescription {
     NSDate *clientModified = [NSDate dateWithTimeIntervalSinceReferenceDate:0];
     MGRFile *file = [[MGRFile alloc] initWithDropboxID:@"id" name:@"name" path:@"/name" clientModified:clientModified size:23];
-    NSLog(@"%@", file);
+    XCTAssertNotNil([file description]);
+//    NSLog(@"%@", file);
 }
 
 - (void)testFolderDescription {
     NSDate *clientModified = [NSDate dateWithTimeIntervalSinceReferenceDate:0];
     MGRFile *file = [[MGRFile alloc] initWithDropboxID:@"id" name:@"name" path:@"/name" clientModified:clientModified size:23];
     MGRFolder *folder = [[MGRFolder alloc] initWithDropboxID:@"id" name:@"name" path:@"/name" childNodes:@[ file ]];
-    NSLog(@"%@", folder);
+    XCTAssertNotNil([folder description]);
+//    NSLog(@"%@", folder);
 }
 
 - (void)testFileHash {

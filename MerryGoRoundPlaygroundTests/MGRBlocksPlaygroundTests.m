@@ -21,7 +21,7 @@
 
 @implementation MGRBlocksPlaygroundTests
 
-- (void)testBlockCaptureScalar {
+- (void)disabled_testBlockCaptureScalar {
     // А если добавить __block?
     int anInteger = 23;
 
@@ -34,7 +34,7 @@
     testBlock();
 }
 
-- (void)testBlockCaptureMutableObject {
+- (void)disabled_testBlockCaptureMutableObject {
     NSMutableArray *anArray = [@[ @"23" ] mutableCopy];
 
     void (^testBlock)(void) = ^{
@@ -56,7 +56,7 @@
     testBlock(123, 456, @"Hello");
 }
 
-- (void)testBlockAutorelease {
+- (void)disabled_testBlockAutorelease {
     // Что будет, если здесь добавить __weak?
     void (^testBlockOutsideAutoreleasePool)(void);
     __weak NSString *aStringOutsideAutoreleasePool;
@@ -86,7 +86,7 @@
     };
 }
 
-- (void)testObjectLikeBlock {
+- (void)disabled_testObjectLikeBlock {
     NSDictionary *obj1 = [self createObjectLikeBlock];
 
     void (^print)() = obj1[@"print"];
@@ -119,7 +119,7 @@
              }};
 }
 
-- (void)testStrongReferenceCycle {
+- (void)disabled_testStrongReferenceCycle {
     __weak ObjectWithStrongBlockReference *objectOutsideAutoreleasePool;
 
     @autoreleasepool {

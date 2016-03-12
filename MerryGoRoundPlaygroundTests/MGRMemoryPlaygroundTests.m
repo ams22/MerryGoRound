@@ -59,7 +59,7 @@
 
 @implementation MGRMemoryPlaygroundTests
 
-- (void)testRetainCycle {
+- (void)disabled_testRetainCycle {
     __weak ClassA *objectAOutsideAutoreleasePool;
     __weak ClassB *objectBOutsideAutoreleasePool;
 
@@ -77,7 +77,7 @@
     NSLog(@"%@ %@", objectAOutsideAutoreleasePool, objectBOutsideAutoreleasePool);
 }
 
-- (void)testAutorelease {
+- (void)disabled_testAutorelease {
     __weak ClassA *objectAOutsideAutoreleasePool;
     @autoreleasepool {
         {
@@ -167,7 +167,7 @@
     NSLog(@"%@", aString);
 }
 
-- (void)testBinarySearchFinder {
+- (void)disabled_testBinarySearchFinder {
     NSComparator comparator = ^NSComparisonResult(NSString *  _Nonnull obj1, NSString *  _Nonnull obj2) {
         return [obj1 localizedCompare:obj2];
     };
@@ -182,7 +182,7 @@
     NSLog(@"Index = %li, object = %@", (long)index, strings[index]);
 }
 
-- (void)testBridging {
+- (void)disabled_testBridging {
     CGSize size = CGSizeMake(100, 100);
     UIGraphicsBeginImageContext(size);
     

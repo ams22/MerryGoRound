@@ -48,14 +48,14 @@
 #pragma clang diagnostic pop
 }
 
-- (void)testCategoryProperty {
+- (void)disabled_testCategoryProperty {
     NSString *aString = @"Hello, world";
     aString.mgr_stringIdentifier = [[NSUUID UUID] UUIDString];
 
     NSLog(@"String «%@» identifier is %@", aString, aString.mgr_stringIdentifier);
 }
 
-- (void)testSwizzling {
+- (void)disabled_testSwizzling {
     NSLog(@"%@", @"Hello, world");
 }
 
