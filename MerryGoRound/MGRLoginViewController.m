@@ -22,8 +22,8 @@
 
 @implementation MGRLoginViewController
 
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
         _nodesManager = [[MGRNodesManager alloc] init];
 
 //        [_nodesManager addTarget:self action:@selector(managerDidUpdateNodes:) forEvent:MGRNodesManagerEventDidUpdateNodes];

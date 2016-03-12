@@ -77,6 +77,18 @@
     NSLog(@"%@ %@", objectAOutsideAutoreleasePool, objectBOutsideAutoreleasePool);
 }
 
+- (void)testAutorelease {
+    __weak ClassA *objectAOutsideAutoreleasePool;
+    @autoreleasepool {
+        {
+            __autoreleasing ClassA *objectA = [[ClassA alloc] init];
+            objectAOutsideAutoreleasePool = objectA;
+        }
+    }
+
+    NSLog(@"%@", objectAOutsideAutoreleasePool);
+}
+
 - (void)testMemoryLeak {
     __weak TimerTarget *targetOusideAutoreleasePool;
 

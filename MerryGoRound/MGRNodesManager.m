@@ -64,19 +64,17 @@
 //}
 
 //- (void)addTarget:(id)target action:(SEL)action forEvent:(MGRNodesManagerEvent)event {
-//    NSValue *actionValue = [NSValue value:action withObjCType:@encode(SEL)];
-//    [self.didUpdateNodesTargetActions setObject:actionValue forKey:target];
+//    [self.didUpdateNodesTargetActions setObject:NSStringFromSelector(action) forKey:target];
 //}
-//
+
 //- (void)removeTarget:(id)target action:(SEL)action forEvent:(MGRNodesManagerEvent)event {
 //    [self.didUpdateNodesTargetActions removeObjectForKey:target];
 //}
-//
+
 //- (void)sendActionsForEvent:(MGRNodesManagerEvent)event {
 //    for (id target in self.didUpdateNodesTargetActions) {
-//        SEL action = nil;
-//        NSValue *actionValue = [self.didUpdateNodesTargetActions objectForKey:target];
-//        [actionValue getValue:&action];
+//        NSString *actionString = [self.didUpdateNodesTargetActions objectForKey:target];
+//        SEL action = NSSelectorFromString(actionString);
 //        [target performSelector:action withObject:self];
 //    }
 //}
