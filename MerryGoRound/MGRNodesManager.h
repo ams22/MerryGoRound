@@ -9,27 +9,17 @@
 #import <Foundation/Foundation.h>
 #import "MGRNode.h"
 
-//extern NSString *const MGRNodesManagerDidUpdateNodesNotification;
+@class MGRNodesManager;
 
-//typedef NS_ENUM(NSUInteger, MGRNodesManagerEvent) {
-//    MGRNodesManagerEventDidUpdateNodes
-//};
-
-//@class MGRNodesManager;
-//
-//@protocol MGRNodesManagerDelegate <NSObject>
-//- (void)managerDidUpdateNodes:(MGRNodesManager *)manager;
-//@end
+@protocol MGRNodesManagerDelegate <NSObject>
+- (void)managerDidUpdateNodes:(MGRNodesManager *)manager;
+@end
 
 @interface MGRNodesManager : NSObject
 
+@property (nonatomic, weak) id<MGRNodesManagerDelegate> delegate;
 @property (nonatomic, readonly, copy) NSArray<id<MGRNode>> *nodes;
 
 - (void)refresh;
-
-//@property (nonatomic, weak) id<MGRNodesManagerDelegate> delegate;
-
-//- (void)addTarget:(id)target action:(SEL)action forEvent:(MGRNodesManagerEvent)event;
-//- (void)removeTarget:(id)target action:(SEL)action forEvent:(MGRNodesManagerEvent)event;
 
 @end
