@@ -27,7 +27,6 @@
 		E3298BF01C8DC9F400D337FB /* NSString+StringIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298BD71C8D812400D337FB /* NSString+StringIdentifier.m */; };
 		E3298BF21C8DCA0100D337FB /* large-picture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E3298BB31C8C62CA00D337FB /* large-picture.jpg */; };
 		E3298BF31C8DCA0A00D337FB /* list_folder.json in Resources */ = {isa = PBXBuildFile; fileRef = E3CD95C41C8232BB00A01D79 /* list_folder.json */; };
-		E3298BF41C8DCAA300D337FB /* MGRMemoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298BCC1C8CC1D100D337FB /* MGRMemoryTest.m */; };
 		E3298BF81C8DCEAB00D337FB /* MGRListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298BF71C8DCEAB00D337FB /* MGRListViewController.m */; };
 		E3298BFB1C8DCF0100D337FB /* MGRSinglePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298BFA1C8DCF0100D337FB /* MGRSinglePhotoViewController.m */; };
 		E3298BFE1C8DCF1000D337FB /* MGRAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298BFD1C8DCF1000D337FB /* MGRAboutViewController.m */; };
@@ -106,7 +105,6 @@
 		E3298BB31C8C62CA00D337FB /* large-picture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "large-picture.jpg"; sourceTree = "<group>"; };
 		E3298BB61C8C76A500D337FB /* BinarySearchFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinarySearchFinder.h; sourceTree = "<group>"; };
 		E3298BB71C8C76A500D337FB /* BinarySearchFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinarySearchFinder.m; sourceTree = "<group>"; };
-		E3298BCC1C8CC1D100D337FB /* MGRMemoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRMemoryTest.m; sourceTree = "<group>"; };
 		E3298BCE1C8D704800D337FB /* DynamicMethodObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicMethodObject.h; sourceTree = "<group>"; };
 		E3298BCF1C8D704800D337FB /* DynamicMethodObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicMethodObject.m; sourceTree = "<group>"; };
 		E3298BD11C8D720A00D337FB /* MGRMessagePassingPlaygroundTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRMessagePassingPlaygroundTests.m; sourceTree = "<group>"; };
@@ -243,7 +241,6 @@
 				E3298BB31C8C62CA00D337FB /* large-picture.jpg */,
 				E3298B881C8C142500D337FB /* MGRBlocksPlaygroundTests.m */,
 				E3298BB11C8C593100D337FB /* MGRMemoryPlaygroundTests.m */,
-				E3298BCC1C8CC1D100D337FB /* MGRMemoryTest.m */,
 				E3298BD11C8D720A00D337FB /* MGRMessagePassingPlaygroundTests.m */,
 				E3298BD61C8D812400D337FB /* NSString+StringIdentifier.h */,
 				E3298BD71C8D812400D337FB /* NSString+StringIdentifier.m */,
@@ -528,7 +525,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3298BEA1C8DC9F400D337FB /* BinarySearchFinder.m in Sources */,
-				E3298BF41C8DCAA300D337FB /* MGRMemoryTest.m in Sources */,
 				E3298BEE1C8DC9F400D337FB /* MGRMemoryPlaygroundTests.m in Sources */,
 				E3298BED1C8DC9F400D337FB /* MGRBlocksPlaygroundTests.m in Sources */,
 				E3298BEB1C8DC9F400D337FB /* DynamicMethodObject.m in Sources */,
@@ -810,6 +806,7 @@
 				E3298BE91C8DC89400D337FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3CD957B1C82294C00A01D79 /* Build configuration list for PBXProject "MerryGoRound" */ = {
 			isa = XCConfigurationList;

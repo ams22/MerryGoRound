@@ -10,6 +10,10 @@
 
 @interface ForwardingObject : NSObject
 
+@end
+
+@interface ForwardingObject (DynamicMethods)
+
 - (void)callHelloWorld;
 
 @end

@@ -22,16 +22,16 @@
     return self;
 }
 
-//- (id)forwardingTargetForSelector:(SEL)aSelector {
-//    return _object;
-//}
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    return _object;
+}
 
-//- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
-//    return [_object methodSignatureForSelector:aSelector];
-//}
-//
-//- (void)forwardInvocation:(NSInvocation *)anInvocation {
-//    [anInvocation invokeWithTarget:_object];
-//}
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+    return [_object methodSignatureForSelector:aSelector];
+}
+
+- (void)forwardInvocation:(NSInvocation *)anInvocation {
+    [anInvocation invokeWithTarget:_object];
+}
 
 @end

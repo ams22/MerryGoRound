@@ -23,9 +23,14 @@
 
     [obj callHelloWorld];
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+
     [obj performSelector:@selector(callDoStuff) withObject:nil];
 
     [[DynamicMethodObject class] performSelector:@selector(callAnything)];
+
+#pragma clang diagnostic pop
 }
 
 - (void)testForwarding {
@@ -33,9 +38,14 @@
 
     [obj callHelloWorld];
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+
     [obj performSelector:@selector(callDoStuff) withObject:nil];
 
     [[DynamicMethodObject class] performSelector:@selector(callAnything)];
+    
+#pragma clang diagnostic pop
 }
 
 - (void)testCategoryProperty {

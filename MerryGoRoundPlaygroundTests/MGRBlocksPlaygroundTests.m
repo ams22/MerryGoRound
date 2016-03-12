@@ -46,7 +46,7 @@
     testBlock();
 }
 
-- (void)testVoidArgumentsBlock {
+- (void)disabled_testVoidArgumentsBlock {
     int anInteger = 23;
 
     void (^testBlock)() = ^{

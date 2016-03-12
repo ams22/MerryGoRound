@@ -10,6 +10,10 @@
 
 @interface DynamicMethodObject : NSObject
 
+@end
+
+@interface DynamicMethodObject (DynamicMethods)
+
 - (void)callHelloWorld;
 
 @end

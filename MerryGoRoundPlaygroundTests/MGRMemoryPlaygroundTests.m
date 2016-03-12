@@ -89,7 +89,7 @@
     NSLog(@"%@", objectAOutsideAutoreleasePool);
 }
 
-- (void)testMemoryLeak {
+- (void)disabled_testMemoryLeak {
     __weak TimerTarget *targetOusideAutoreleasePool;
 
     @autoreleasepool {
@@ -112,13 +112,12 @@
     [self waitForExpectationsWithTimeout:10 handler:nil];
 }
 
-- (void)testDanglingPointer {
+- (void)disabled_testDanglingPointer {
     NSString *multilineString = [self listFolderJSONString];
     NSString *lineString = nil;
     NSUInteger index = [multilineString lineIndexContainingSubstring:@"Dropbox" lineString:&lineString];
     NSLog(@"Substring found in line number %lu (%@)", (unsigned long)index, lineString);
 }
-
 
 - (NSString *)listFolderJSONString {
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
@@ -127,7 +126,7 @@
     return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 
-- (void)testAccidentalMemoryUsage {
+- (void)disabled_testAccidentalMemoryUsage {
     NSMutableArray *imageData = [NSMutableArray array];
 
     for (NSInteger idx = 0; idx < 10; idx++) {
@@ -142,7 +141,7 @@
     }
 }
 
-- (void)testAccidentalMemoryUsage2 {
+- (void)disabled_testAccidentalMemoryUsage2 {
     for (NSInteger idx = 0; idx < 100; idx++) {
 //        NSString *string = [[NSString alloc] initWithFormat:@"asldjalsjdlasd %li", (long)idx];
         NSString *string = [NSString stringWithFormat:@"asldjalsjdlasd %li", (long)idx];
@@ -150,7 +149,7 @@
     }
 }
 
-- (void)testException {
+- (void)disabled_testException {
     __weak NSString *aString;
 
     @try {
