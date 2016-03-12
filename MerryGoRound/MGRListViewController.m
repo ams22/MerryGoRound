@@ -10,7 +10,7 @@
 
 @implementation MGRListViewController
 
-- (IBAction)unwindToList:(UIStoryboardSegue *)sender {
+- (IBAction)unwindFromAbout:(UIStoryboardSegue *)sender {
 }
 
 @end

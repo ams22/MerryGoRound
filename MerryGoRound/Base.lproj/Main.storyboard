@@ -99,12 +99,20 @@
                                     <segue destination="R4Y-Ey-PDR" kind="presentation" id="5zU-Fe-D81"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQ9-99-maI">
+                                <rect key="frame" x="21" y="382" width="45" height="30"/>
+                                <state key="normal" title="Выйти"/>
+                                <connections>
+                                    <segue destination="tCP-hH-Xc1" kind="unwind" unwindAction="unwindToLogin:" id="cBG-5w-9jf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Фоточки" id="ZtA-QD-0cw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7g-nO-EyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tCP-hH-Xc1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1705" y="339"/>
         </scene>
@@ -124,7 +132,7 @@
                                 <rect key="frame" x="20" y="28" width="60" height="30"/>
                                 <state key="normal" title="Закрыть"/>
                                 <connections>
-                                    <segue destination="Aa0-KG-1dz" kind="unwind" unwindAction="unwindToList:" id="RTP-id-8td"/>
+                                    <segue destination="Aa0-KG-1dz" kind="unwind" unwindAction="unwindFromAbout:" id="EYg-1W-doN"/>
                                 </connections>
                             </button>
                         </subviews>

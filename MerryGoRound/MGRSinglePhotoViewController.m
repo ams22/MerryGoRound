@@ -10,7 +10,7 @@
 
 @implementation MGRSinglePhotoViewController
 
-- (IBAction)unwindToSinglePhoto:(UIStoryboardSegue *)sender {
+- (IBAction)unwindFromAbout:(UIStoryboardSegue *)sender {
 }
 
 @end
