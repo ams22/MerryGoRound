@@ -16,9 +16,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E3CD95981C82294D00A01D79"
-               BuildableName = "MerryGoRoundTests.xctest"
-               BlueprintName = "MerryGoRoundTests"
+               BlueprintIdentifier = "E3298BDF1C8DC89400D337FB"
+               BuildableName = "MerryGoRoundPlaygroundTests.xctest"
+               BlueprintName = "MerryGoRoundPlaygroundTests"
                ReferencedContainer = "container:MerryGoRound.xcodeproj">
             </BuildableReference>
          </TestableReference>

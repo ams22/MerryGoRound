@@ -20,13 +20,42 @@
                ReferencedContainer = "container:MerryGoRound.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E3CD95A31C82294D00A01D79"
+               BuildableName = "MerryGoRoundUITests.xctest"
+               BlueprintName = "MerryGoRoundUITests"
+               ReferencedContainer = "container:MerryGoRound.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E3298BDF1C8DC89400D337FB"
+               BuildableName = "MerryGoRoundPlaygroundTests.xctest"
+               BlueprintName = "MerryGoRoundPlaygroundTests"
+               ReferencedContainer = "container:MerryGoRound.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -42,9 +71,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E3CD95A31C82294D00A01D79"
-               BuildableName = "MerryGoRoundUITests.xctest"
-               BlueprintName = "MerryGoRoundUITests"
+               BlueprintIdentifier = "E3298BDF1C8DC89400D337FB"
+               BuildableName = "MerryGoRoundPlaygroundTests.xctest"
+               BlueprintName = "MerryGoRoundPlaygroundTests"
                ReferencedContainer = "container:MerryGoRound.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -52,9 +81,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E3298BDF1C8DC89400D337FB"
-               BuildableName = "MerryGoRoundPlaygroundTests.xctest"
-               BlueprintName = "MerryGoRoundPlaygroundTests"
+               BlueprintIdentifier = "E3CD95A31C82294D00A01D79"
+               BuildableName = "MerryGoRoundUITests.xctest"
+               BlueprintName = "MerryGoRoundUITests"
                ReferencedContainer = "container:MerryGoRound.xcodeproj">
             </BuildableReference>
          </TestableReference>
