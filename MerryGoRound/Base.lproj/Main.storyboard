@@ -89,7 +89,7 @@
                                 <rect key="frame" x="275" y="215" width="61" height="30"/>
                                 <state key="normal" title="Открыть"/>
                                 <connections>
-                                    <segue destination="GWO-DJ-g0k" kind="show" id="SNj-ue-T1y"/>
+                                    <segue destination="GWO-DJ-g0k" kind="show" identifier="ShowPhoto" id="SNj-ue-T1y"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itc-P6-aXG">
@@ -162,10 +162,16 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2b-8v-24p">
                                 <rect key="frame" x="20" y="247" width="131" height="30"/>
                                 <state key="normal" title="Открыть панельку"/>
+                                <connections>
+                                    <action selector="openInfo:" destination="GWO-DJ-g0k" eventType="touchUpInside" id="bUd-CE-sIF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZH9-IW-VdU">
                                 <rect key="frame" x="20" y="285" width="79" height="30"/>
                                 <state key="normal" title="Расшарить"/>
+                                <connections>
+                                    <action selector="openShare:" destination="GWO-DJ-g0k" eventType="touchUpInside" id="njS-i9-NdX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5L-a3-Y0S">
                                 <rect key="frame" x="20" y="323" width="97" height="30"/>

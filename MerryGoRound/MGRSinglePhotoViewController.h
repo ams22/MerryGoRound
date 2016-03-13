@@ -10,4 +10,6 @@
 
 @interface MGRSinglePhotoViewController : UIViewController
 
+@property (nonatomic, copy) NSURL *photoURL;
+
 @end
