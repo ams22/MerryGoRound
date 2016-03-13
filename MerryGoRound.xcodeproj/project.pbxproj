@@ -30,6 +30,8 @@
 		E3298BF81C8DCEAB00D337FB /* MGRListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298BF71C8DCEAB00D337FB /* MGRListViewController.m */; };
 		E3298BFB1C8DCF0100D337FB /* MGRSinglePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298BFA1C8DCF0100D337FB /* MGRSinglePhotoViewController.m */; };
 		E3298BFE1C8DCF1000D337FB /* MGRAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298BFD1C8DCF1000D337FB /* MGRAboutViewController.m */; };
+		E3298C021C95617C00D337FB /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298C011C95617C00D337FB /* SWRevealViewController.m */; };
+		E3298C051C95629D00D337FB /* MGRMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298C041C95629D00D337FB /* MGRMenuViewController.m */; };
 		E3CD95851C82294D00A01D79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95841C82294D00A01D79 /* main.m */; };
 		E3CD95881C82294D00A01D79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95871C82294D00A01D79 /* AppDelegate.m */; };
 		E3CD958B1C82294D00A01D79 /* MGRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD958A1C82294D00A01D79 /* MGRLoginViewController.m */; };
@@ -122,6 +124,10 @@
 		E3298BFA1C8DCF0100D337FB /* MGRSinglePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRSinglePhotoViewController.m; sourceTree = "<group>"; };
 		E3298BFC1C8DCF1000D337FB /* MGRAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRAboutViewController.h; sourceTree = "<group>"; };
 		E3298BFD1C8DCF1000D337FB /* MGRAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRAboutViewController.m; sourceTree = "<group>"; };
+		E3298C001C95617C00D337FB /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		E3298C011C95617C00D337FB /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		E3298C031C95629D00D337FB /* MGRMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRMenuViewController.h; sourceTree = "<group>"; };
+		E3298C041C95629D00D337FB /* MGRMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRMenuViewController.m; sourceTree = "<group>"; };
 		E3CD95801C82294C00A01D79 /* MerryGoRound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MerryGoRound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3CD95841C82294D00A01D79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E3CD95861C82294D00A01D79 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -192,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				E3298B8B1C8C2A5800D337FB /* extobjc */,
+				E3298BFF1C95617C00D337FB /* SWRevealViewController */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -259,10 +266,22 @@
 				E3298BF71C8DCEAB00D337FB /* MGRListViewController.m */,
 				E3CD95891C82294D00A01D79 /* MGRLoginViewController.h */,
 				E3CD958A1C82294D00A01D79 /* MGRLoginViewController.m */,
+				E3298C031C95629D00D337FB /* MGRMenuViewController.h */,
+				E3298C041C95629D00D337FB /* MGRMenuViewController.m */,
 				E3298BF91C8DCF0100D337FB /* MGRSinglePhotoViewController.h */,
 				E3298BFA1C8DCF0100D337FB /* MGRSinglePhotoViewController.m */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E3298BFF1C95617C00D337FB /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E3298C001C95617C00D337FB /* SWRevealViewController.h */,
+				E3298C011C95617C00D337FB /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
+			path = SWRevealViewController/SWRevealViewController;
 			sourceTree = "<group>";
 		};
 		E3CD95771C82294C00A01D79 = {
@@ -541,6 +560,8 @@
 				E3298BA91C8C2A5800D337FB /* EXTScope.m in Sources */,
 				E3CD95CA1C82E7AA00A01D79 /* MGRDropboxParser.m in Sources */,
 				E3298BA71C8C2A5800D337FB /* EXTRuntimeExtensions.m in Sources */,
+				E3298C021C95617C00D337FB /* SWRevealViewController.m in Sources */,
+				E3298C051C95629D00D337FB /* MGRMenuViewController.m in Sources */,
 				E3298BA41C8C2A5800D337FB /* EXTADT.m in Sources */,
 				E3CD958B1C82294D00A01D79 /* MGRLoginViewController.m in Sources */,
 				E3298BA51C8C2A5800D337FB /* EXTConcreteProtocol.m in Sources */,

@@ -7,7 +7,13 @@
 //
 
 #import "MGRAboutViewController.h"
+#import "SWRevealViewController.h"
 
 @implementation MGRAboutViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.view addGestureRecognizer:[self.revealViewController panGestureRecognizer]];
+}
 
 @end
