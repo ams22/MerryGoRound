@@ -12,5 +12,6 @@
 @interface MGRListViewController : UIViewController
 
 @property (nonatomic, strong) DBSession *session;
+@property (nonatomic, copy) NSString *path;
 
 @end

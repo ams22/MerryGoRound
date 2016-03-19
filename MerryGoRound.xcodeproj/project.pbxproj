@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		853B895D1C9D749B00417DC5 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853B895C1C9D749B00417DC5 /* DropboxSDK.framework */; };
+		853B89641C9DC31300417DC5 /* MGRFolderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 853B89631C9DC31300417DC5 /* MGRFolderCell.m */; };
+		853B89671C9DC32300417DC5 /* MGRPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 853B89661C9DC32300417DC5 /* MGRPhotoCell.m */; };
 		E3298BA41C8C2A5800D337FB /* EXTADT.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B8D1C8C2A5800D337FB /* EXTADT.m */; };
 		E3298BA51C8C2A5800D337FB /* EXTConcreteProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B8F1C8C2A5800D337FB /* EXTConcreteProtocol.m */; };
 		E3298BA61C8C2A5800D337FB /* EXTNil.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B931C8C2A5800D337FB /* EXTNil.m */; };
@@ -76,6 +78,10 @@
 
 /* Begin PBXFileReference section */
 		853B895C1C9D749B00417DC5 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
+		853B89621C9DC31300417DC5 /* MGRFolderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRFolderCell.h; sourceTree = "<group>"; };
+		853B89631C9DC31300417DC5 /* MGRFolderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRFolderCell.m; sourceTree = "<group>"; };
+		853B89651C9DC32300417DC5 /* MGRPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRPhotoCell.h; sourceTree = "<group>"; };
+		853B89661C9DC32300417DC5 /* MGRPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRPhotoCell.m; sourceTree = "<group>"; };
 		E3298B881C8C142500D337FB /* MGRBlocksPlaygroundTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRBlocksPlaygroundTests.m; sourceTree = "<group>"; };
 		E3298B8C1C8C2A5800D337FB /* EXTADT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTADT.h; sourceTree = "<group>"; };
 		E3298B8D1C8C2A5800D337FB /* EXTADT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTADT.m; sourceTree = "<group>"; };
@@ -199,6 +205,17 @@
 			path = DropboxSDK;
 			sourceTree = "<group>";
 		};
+		853B89611C9DC2F200417DC5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				853B89621C9DC31300417DC5 /* MGRFolderCell.h */,
+				853B89631C9DC31300417DC5 /* MGRFolderCell.m */,
+				853B89651C9DC32300417DC5 /* MGRPhotoCell.h */,
+				853B89661C9DC32300417DC5 /* MGRPhotoCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		E3298B8A1C8C2A2A00D337FB /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +322,7 @@
 			children = (
 				E3CD95B61C822AB900A01D79 /* Model */,
 				E3298BF51C8DCE7B00D337FB /* View Controllers */,
+				853B89611C9DC2F200417DC5 /* Views */,
 				E3CD95861C82294D00A01D79 /* AppDelegate.h */,
 				E3CD95871C82294D00A01D79 /* AppDelegate.m */,
 				E3CD958C1C82294D00A01D79 /* Main.storyboard */,
@@ -554,7 +572,9 @@
 				E3CD95CA1C82E7AA00A01D79 /* MGRDropboxParser.m in Sources */,
 				E3298BA71C8C2A5800D337FB /* EXTRuntimeExtensions.m in Sources */,
 				E3298BA41C8C2A5800D337FB /* EXTADT.m in Sources */,
+				853B89641C9DC31300417DC5 /* MGRFolderCell.m in Sources */,
 				E3CD958B1C82294D00A01D79 /* MGRLoginViewController.m in Sources */,
+				853B89671C9DC32300417DC5 /* MGRPhotoCell.m in Sources */,
 				E3298BA51C8C2A5800D337FB /* EXTConcreteProtocol.m in Sources */,
 				E3CD95BC1C822EF200A01D79 /* MGRFile.m in Sources */,
 				E3298BF81C8DCEAB00D337FB /* MGRListViewController.m in Sources */,

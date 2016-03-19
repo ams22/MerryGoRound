@@ -51,6 +51,7 @@
         UINavigationController *destination = segue.destinationViewController;
         MGRListViewController *controller = destination.viewControllers.firstObject;
         controller.session = self.session;
+        controller.path = @"/";
     }
 }
 
