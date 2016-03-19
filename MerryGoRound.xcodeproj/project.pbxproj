@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		853B895D1C9D749B00417DC5 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853B895C1C9D749B00417DC5 /* DropboxSDK.framework */; };
 		E3298BA41C8C2A5800D337FB /* EXTADT.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B8D1C8C2A5800D337FB /* EXTADT.m */; };
 		E3298BA51C8C2A5800D337FB /* EXTConcreteProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B8F1C8C2A5800D337FB /* EXTConcreteProtocol.m */; };
 		E3298BA61C8C2A5800D337FB /* EXTNil.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B931C8C2A5800D337FB /* EXTNil.m */; };
@@ -74,6 +75,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		853B895C1C9D749B00417DC5 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
 		E3298B881C8C142500D337FB /* MGRBlocksPlaygroundTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRBlocksPlaygroundTests.m; sourceTree = "<group>"; };
 		E3298B8C1C8C2A5800D337FB /* EXTADT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTADT.h; sourceTree = "<group>"; };
 		E3298B8D1C8C2A5800D337FB /* EXTADT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTADT.m; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				853B895D1C9D749B00417DC5 /* DropboxSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,9 +191,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		853B895B1C9D749B00417DC5 /* DropboxSDK */ = {
+			isa = PBXGroup;
+			children = (
+				853B895C1C9D749B00417DC5 /* DropboxSDK.framework */,
+			);
+			path = DropboxSDK;
+			sourceTree = "<group>";
+		};
 		E3298B8A1C8C2A2A00D337FB /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				853B895B1C9D749B00417DC5 /* DropboxSDK */,
 				E3298B8B1C8C2A5800D337FB /* extobjc */,
 			);
 			path = ThirdParty;
@@ -730,6 +742,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ThirdParty/DropboxSDK",
+				);
 				INFOPLIST_FILE = MerryGoRound/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.mail.track.MerryGoRound;
@@ -741,6 +757,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ThirdParty/DropboxSDK",
+				);
 				INFOPLIST_FILE = MerryGoRound/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.mail.track.MerryGoRound;

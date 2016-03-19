@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -17,29 +19,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app-logo" translatesAutoresizingMaskIntoConstraints="NO" id="ich-gm-2Za">
-                                <rect key="frame" x="20" y="28" width="250" height="167"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app-logo" translatesAutoresizingMaskIntoConstraints="NO" id="ich-gm-2Za">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="user@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ysf-pr-2iD">
-                                <rect key="frame" x="20" y="203" width="250" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passw0rd" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="15w-pU-1R9">
-                                <rect key="frame" x="20" y="241" width="250" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cce-hB-bU9">
-                                <rect key="frame" x="123" y="279" width="44" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cce-hB-bU9">
+                                <rect key="frame" x="20" y="244" width="560" height="113"/>
+                                <color key="backgroundColor" white="1" alpha="0.90480735085227271" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="40" maxX="40" maxY="40"/>
                                 <state key="normal" title="Войти"/>
                                 <connections>
-                                    <segue destination="SHw-Se-gxr" kind="presentation" id="AFM-CM-cXH"/>
+                                    <segue destination="SHw-Se-gxr" kind="presentation" identifier="Photos" id="AFM-CM-cXH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acM-Hx-3r9">
+                                <rect key="frame" x="257" y="565" width="87" height="27"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="О приложении"/>
+                                <connections>
+                                    <segue destination="R4Y-Ey-PDR" kind="presentation" id="JWX-hX-5vu"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ich-gm-2Za" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3fS-QH-Foc"/>
+                            <constraint firstItem="cce-hB-bU9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KrC-aH-zjS"/>
+                            <constraint firstItem="cce-hB-bU9" firstAttribute="centerXWithinMargins" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RHe-le-cSC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cce-hB-bU9" secondAttribute="trailing" id="U8z-vY-YyG"/>
+                            <constraint firstItem="cce-hB-bU9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="g9B-Ef-0bF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ich-gm-2Za" secondAttribute="bottom" id="ga1-KC-5Z8"/>
+                            <constraint firstAttribute="trailing" secondItem="ich-gm-2Za" secondAttribute="trailing" id="lKH-O9-wqK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="acM-Hx-3r9" secondAttribute="bottom" constant="8" symbolic="YES" id="rKd-yQ-m6d"/>
+                            <constraint firstItem="acM-Hx-3r9" firstAttribute="centerXWithinMargins" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tHG-aR-rem"/>
+                            <constraint firstItem="ich-gm-2Za" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ys1-87-VqR"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="cce-hB-bU9" id="Qkh-zk-Bfb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,7 +158,7 @@
                                 <rect key="frame" x="20" y="28" width="60" height="30"/>
                                 <state key="normal" title="Закрыть"/>
                                 <connections>
-                                    <segue destination="Aa0-KG-1dz" kind="unwind" unwindAction="unwindFromAbout:" id="EYg-1W-doN"/>
+                                    <segue destination="Aa0-KG-1dz" kind="unwind" unwindAction="unwindFromAbout:" id="hsv-ce-qzi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -201,7 +220,7 @@
         <image name="app-logo" width="250" height="167"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="JWX-hX-5vu"/>
         <segue reference="Rih-pU-p9B"/>
-        <segue reference="5zU-Fe-D81"/>
     </inferredMetricsTieBreakers>
 </document>

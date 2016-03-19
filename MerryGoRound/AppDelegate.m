@@ -7,8 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import <DropboxSDK/DropboxSDK.h>
+#import "MGRLoginViewController.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) DBSession *session;
 
 @end
 
@@ -16,7 +20,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.session = [[DBSession alloc] initWithAppKey:@"yoykfhbr69abubo" appSecret:@"jzgj6imeiop5t6w" root:kDBRootDropbox];
+
+    MGRLoginViewController *loginController = (MGRLoginViewController *)self.window.rootViewController;
+    loginController.session = self.session;
+
     return YES;
 }
 
@@ -40,6 +48,20 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    if ([self.session handleOpenURL:url]) {
+        return YES;
+    }
+    return NO;
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
+    if ([self.session handleOpenURL:url]) {
+        return YES;
+    }
+    return NO;
 }
 
 @end

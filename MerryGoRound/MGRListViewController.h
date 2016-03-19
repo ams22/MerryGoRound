@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <DropboxSDK/DropboxSDK.h>
 
 @interface MGRListViewController : UIViewController
+
+@property (nonatomic, strong) DBSession *session;
 
 @end
