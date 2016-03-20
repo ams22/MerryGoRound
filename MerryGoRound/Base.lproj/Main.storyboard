@@ -109,13 +109,22 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7er-iG-L4q">
+                                                    <rect key="frame" x="528" y="15" width="31" height="14.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="cxO-8c-DTd" firstAttribute="leading" secondItem="ghp-XC-SNA" secondAttribute="leadingMargin" constant="10" id="4Ak-hT-zVP"/>
                                                 <constraint firstItem="cxO-8c-DTd" firstAttribute="centerY" secondItem="ghp-XC-SNA" secondAttribute="centerY" id="GJb-yG-ZB8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="7er-iG-L4q" secondAttribute="trailing" id="TJV-sV-9C7"/>
+                                                <constraint firstItem="7er-iG-L4q" firstAttribute="centerY" secondItem="ghp-XC-SNA" secondAttribute="centerY" id="tzo-q4-ulS"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="subtitleLabel" destination="7er-iG-L4q" id="Z4g-Gc-olK"/>
                                             <outlet property="titleLabel" destination="cxO-8c-DTd" id="ICb-Pr-4vf"/>
                                             <segue destination="14w-x0-s0V" kind="show" identifier="ShowFolder" id="xR4-Za-IuS"/>
                                         </connections>
@@ -130,15 +139,24 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app-logo" translatesAutoresizingMaskIntoConstraints="NO" id="cAV-m1-Sbh">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eu0-vW-Rae">
+                                                    <rect key="frame" x="561" y="21" width="31" height="14.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="cAV-m1-Sbh" secondAttribute="bottom" id="6RI-sP-OMa"/>
                                                 <constraint firstItem="cAV-m1-Sbh" firstAttribute="leading" secondItem="SL4-nv-L2C" secondAttribute="leading" id="Aer-jd-mFi"/>
                                                 <constraint firstItem="cAV-m1-Sbh" firstAttribute="top" secondItem="SL4-nv-L2C" secondAttribute="top" id="SR0-ez-zlE"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eu0-vW-Rae" secondAttribute="trailing" id="WM8-o4-x1B"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="eu0-vW-Rae" secondAttribute="bottom" id="aUb-oC-z6R"/>
                                                 <constraint firstAttribute="trailing" secondItem="cAV-m1-Sbh" secondAttribute="trailing" id="cR3-hw-GWr"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="sizeLabel" destination="eu0-vW-Rae" id="8RV-bc-BvY"/>
                                             <outlet property="thumbnailView" destination="cAV-m1-Sbh" id="swn-ys-Fqe"/>
                                             <segue destination="GWO-DJ-g0k" kind="show" identifier="ShowPhoto" id="rkq-zH-KZW"/>
                                         </connections>
@@ -222,10 +240,10 @@
             </objects>
             <point key="canvasLocation" x="1739" y="1450"/>
         </scene>
-        <!--Одна фоточка-->
+        <!--Single Photo View Controller-->
         <scene sceneID="7Rb-l3-pQL">
             <objects>
-                <viewController title="Одна фоточка" id="GWO-DJ-g0k" customClass="MGRSinglePhotoViewController" sceneMemberID="viewController">
+                <viewController id="GWO-DJ-g0k" customClass="MGRSinglePhotoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kwy-gN-YRZ"/>
                         <viewControllerLayoutGuide type="bottom" id="U6U-iT-bVr"/>
@@ -237,39 +255,41 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app-logo" translatesAutoresizingMaskIntoConstraints="NO" id="B77-8P-gOU">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2b-8v-24p">
-                                <rect key="frame" x="20" y="247" width="131" height="30"/>
-                                <state key="normal" title="Открыть панельку"/>
-                                <connections>
-                                    <action selector="openInfo:" destination="GWO-DJ-g0k" eventType="touchUpInside" id="bUd-CE-sIF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZH9-IW-VdU">
-                                <rect key="frame" x="20" y="285" width="79" height="30"/>
-                                <state key="normal" title="Расшарить"/>
-                                <connections>
-                                    <action selector="openShare:" destination="GWO-DJ-g0k" eventType="touchUpInside" id="njS-i9-NdX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5L-a3-Y0S">
-                                <rect key="frame" x="20" y="323" width="97" height="30"/>
-                                <state key="normal" title="О программе"/>
-                                <connections>
-                                    <segue destination="R4Y-Ey-PDR" kind="presentation" id="Vbe-Yx-VfB"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="U6U-iT-bVr" firstAttribute="top" secondItem="B77-8P-gOU" secondAttribute="bottom" id="6tN-fD-XxO"/>
+                            <constraint firstAttribute="bottom" secondItem="B77-8P-gOU" secondAttribute="bottom" id="LJf-Eu-oL7"/>
                             <constraint firstAttribute="trailing" secondItem="B77-8P-gOU" secondAttribute="trailing" id="LSY-rd-mfe"/>
                             <constraint firstItem="B77-8P-gOU" firstAttribute="top" secondItem="d0W-ve-jbk" secondAttribute="top" id="Vha-v8-Vad"/>
                             <constraint firstItem="B77-8P-gOU" firstAttribute="leading" secondItem="d0W-ve-jbk" secondAttribute="leading" id="x0C-8K-T9U"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Одна фоточка" id="yMJ-zM-Wp9"/>
+                    <navigationItem key="navigationItem" id="yMJ-zM-Wp9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Ju8-ZK-IAF">
+                            <connections>
+                                <action selector="openShare:" destination="GWO-DJ-g0k" id="dQc-dG-FXw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="aboutItem" destination="58H-Ju-yFY" id="57f-GS-mde"/>
+                        <outlet property="infoItem" destination="Q07-16-pTv" id="GwR-IK-Msn"/>
+                        <outlet property="photoView" destination="B77-8P-gOU" id="UcB-w4-Ms3"/>
+                        <outlet property="shareItem" destination="Ju8-ZK-IAF" id="nMw-nn-rFQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zjn-PE-8fH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <barButtonItem title="О приложении" id="58H-Ju-yFY">
+                    <connections>
+                        <segue destination="R4Y-Ey-PDR" kind="presentation" id="HUJ-43-lMy"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem title="Информация" id="Q07-16-pTv">
+                    <connections>
+                        <action selector="openInfo:" destination="GWO-DJ-g0k" id="guE-a5-r39"/>
+                    </connections>
+                </barButtonItem>
             </objects>
             <point key="canvasLocation" x="2459" y="339"/>
         </scene>
@@ -279,6 +299,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Rih-pU-p9B"/>
-        <segue reference="Vbe-Yx-VfB"/>
+        <segue reference="HUJ-43-lMy"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,5 +11,6 @@
 @interface MGRPhotoCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *thumbnailView;
+@property (weak, nonatomic) IBOutlet UILabel *sizeLabel;
 
 @end

@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <DropboxSDK/DropboxSDK.h>
 
 @interface MGRSinglePhotoViewController : UIViewController
 
-@property (nonatomic, copy) NSURL *photoURL;
+@property (nonatomic, strong) DBSession *session;
+@property (nonatomic, copy) NSString *path;
 
 @end
