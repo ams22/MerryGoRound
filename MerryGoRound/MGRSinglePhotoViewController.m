@@ -7,6 +7,7 @@
 //
 
 #import "MGRSinglePhotoViewController.h"
+#import "MGRMetadataViewController.h"
 
 @interface MGRSinglePhotoViewController () <DBRestClientDelegate>
 
@@ -71,6 +72,14 @@
     [self.client cancelAllRequests];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"ShowMetadata"]) {
+        MGRMetadataViewController *controller = segue.destinationViewController;
+        controller.session = self.session;
+        controller.path = [self.metadata path];
+    }
+}
+
 - (NSString *)photoPathWithPath:(NSString *)path {
     NSString *filename = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@"/"].invertedSet];
     return [[self photosPath] stringByAppendingPathComponent:filename];
@@ -95,6 +104,9 @@
 - (IBAction)unwindFromAbout:(UIStoryboardSegue *)sender {
 }
 
+- (IBAction)unwindFromMetadata:(UIStoryboardSegue *)sender {
+}
+
 - (IBAction)openInfo:(id)sender {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:[NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__] preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
@@ -105,6 +117,7 @@
     if (self.image) {
         UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:@[ self.image ] applicationActivities:nil];
         [self presentViewController:controller animated:YES completion:nil];
+        controller.popoverPresentationController.barButtonItem = sender;
     }
 }
 

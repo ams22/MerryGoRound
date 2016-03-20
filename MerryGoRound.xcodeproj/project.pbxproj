@@ -10,6 +10,7 @@
 		853B895D1C9D749B00417DC5 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853B895C1C9D749B00417DC5 /* DropboxSDK.framework */; };
 		853B89641C9DC31300417DC5 /* MGRFolderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 853B89631C9DC31300417DC5 /* MGRFolderCell.m */; };
 		853B89671C9DC32300417DC5 /* MGRPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 853B89661C9DC32300417DC5 /* MGRPhotoCell.m */; };
+		853B896A1C9EA69E00417DC5 /* MGRMetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 853B89691C9EA69E00417DC5 /* MGRMetadataViewController.m */; };
 		E3298BA41C8C2A5800D337FB /* EXTADT.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B8D1C8C2A5800D337FB /* EXTADT.m */; };
 		E3298BA51C8C2A5800D337FB /* EXTConcreteProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B8F1C8C2A5800D337FB /* EXTConcreteProtocol.m */; };
 		E3298BA61C8C2A5800D337FB /* EXTNil.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B931C8C2A5800D337FB /* EXTNil.m */; };
@@ -82,6 +83,8 @@
 		853B89631C9DC31300417DC5 /* MGRFolderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRFolderCell.m; sourceTree = "<group>"; };
 		853B89651C9DC32300417DC5 /* MGRPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRPhotoCell.h; sourceTree = "<group>"; };
 		853B89661C9DC32300417DC5 /* MGRPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRPhotoCell.m; sourceTree = "<group>"; };
+		853B89681C9EA69E00417DC5 /* MGRMetadataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRMetadataViewController.h; sourceTree = "<group>"; };
+		853B89691C9EA69E00417DC5 /* MGRMetadataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRMetadataViewController.m; sourceTree = "<group>"; };
 		E3298B881C8C142500D337FB /* MGRBlocksPlaygroundTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRBlocksPlaygroundTests.m; sourceTree = "<group>"; };
 		E3298B8C1C8C2A5800D337FB /* EXTADT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTADT.h; sourceTree = "<group>"; };
 		E3298B8D1C8C2A5800D337FB /* EXTADT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTADT.m; sourceTree = "<group>"; };
@@ -288,6 +291,8 @@
 				E3298BF71C8DCEAB00D337FB /* MGRListViewController.m */,
 				E3CD95891C82294D00A01D79 /* MGRLoginViewController.h */,
 				E3CD958A1C82294D00A01D79 /* MGRLoginViewController.m */,
+				853B89681C9EA69E00417DC5 /* MGRMetadataViewController.h */,
+				853B89691C9EA69E00417DC5 /* MGRMetadataViewController.m */,
 				E3298BF91C8DCF0100D337FB /* MGRSinglePhotoViewController.h */,
 				E3298BFA1C8DCF0100D337FB /* MGRSinglePhotoViewController.m */,
 			);
@@ -581,6 +586,7 @@
 				E3298BFB1C8DCF0100D337FB /* MGRSinglePhotoViewController.m in Sources */,
 				E3298BA81C8C2A5800D337FB /* EXTSafeCategory.m in Sources */,
 				E3298BAF1C8C3B8900D337FB /* MGRNodesManager.m in Sources */,
+				853B896A1C9EA69E00417DC5 /* MGRMetadataViewController.m in Sources */,
 				E3298BFE1C8DCF1000D337FB /* MGRAboutViewController.m in Sources */,
 				E3CD95C31C822FC900A01D79 /* MGRAbstractNode.m in Sources */,
 				E3CD95881C82294D00A01D79 /* AppDelegate.m in Sources */,
