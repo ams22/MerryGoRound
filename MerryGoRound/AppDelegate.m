@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <DropboxSDK/DropboxSDK.h>
 #import "MGRLoginViewController.h"
+#import "GTMOAuth2ViewControllerTouch.h"
 
 @interface AppDelegate ()
 
@@ -22,8 +23,22 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.session = [[DBSession alloc] initWithAppKey:@"yoykfhbr69abubo" appSecret:@"jzgj6imeiop5t6w" root:kDBRootDropbox];
 
-    MGRLoginViewController *loginController = (MGRLoginViewController *)self.window.rootViewController;
-    loginController.session = self.session;
+    UINavigationController *rootViewController = (UINavigationController *)self.window.rootViewController;
+    MGRLoginViewController *loginController = (MGRLoginViewController *)rootViewController.viewControllers.firstObject;
+
+    NSURL *tokenURL = [NSURL URLWithString:@"https://api.dropboxapi.com/1/oauth2/token"];
+    NSString *redirectURLString = @"http://localhost/oauthcallback";
+
+    GTMOAuth2Authentication *authentication =
+    [GTMOAuth2Authentication authenticationWithServiceProvider:@"Dropbox"
+                                                      tokenURL:tokenURL
+                                                   redirectURI:redirectURLString
+                                                      clientID:@"yoykfhbr69abubo"
+                                                  clientSecret:@"jzgj6imeiop5t6w"];
+    [GTMOAuth2ViewControllerTouch authorizeFromKeychainForName:@"Merry-go-round: Dropbox"
+                                                authentication:authentication
+                                                         error:NULL];
+    loginController.authentication = authentication;
 
     return YES;
 }

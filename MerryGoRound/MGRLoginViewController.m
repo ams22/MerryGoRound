@@ -8,7 +8,7 @@
 
 #import "MGRLoginViewController.h"
 #import "MGRListViewController.h"
-#import <DropboxSDK/DropboxSDK.h>
+#import "GTMOAuth2ViewControllerTouch.h"
 
 @interface MGRLoginViewController ()
 
@@ -27,7 +27,8 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    if ([self.session isLinked]) {
+
+    if ([self.authentication canAuthorize]) {
         [self performSegueWithIdentifier:@"Photos" sender:nil];
     }
 }
@@ -38,8 +39,21 @@
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
     if ([identifier isEqualToString:@"Photos"]) {
-        if (![self.session isLinked]) {
-            [self.session linkFromController:self];
+        if (![self.authentication canAuthorize]) {
+            NSURL *authorizationURL = [NSURL URLWithString:@"https://www.dropbox.com/1/oauth2/authorize"];
+
+            GTMOAuth2ViewControllerTouch *controller =
+            [[GTMOAuth2ViewControllerTouch alloc] initWithAuthentication:self.authentication
+                                                        authorizationURL:authorizationURL
+                                                        keychainItemName:@"Merry-go-round: Dropbox"
+                                                       completionHandler:
+             ^(GTMOAuth2ViewControllerTouch *viewController, GTMOAuth2Authentication *auth, NSError *error) {
+                 [self.navigationController setNavigationBarHidden:YES animated:YES];
+             }];
+            controller.navigationItem.title = @"Вход";
+            [self.navigationController setNavigationBarHidden:NO animated:YES];
+            [self.navigationController pushViewController:controller animated:YES];
+
             return NO;
         }
     }
@@ -50,13 +64,13 @@
     if ([segue.identifier isEqualToString:@"Photos"]) {
         UINavigationController *destination = segue.destinationViewController;
         MGRListViewController *controller = destination.viewControllers.firstObject;
-        controller.session = self.session;
+//        controller.session = self.session;
         controller.path = @"/";
     }
 }
 
 - (IBAction)unwindToLogin:(UIStoryboardSegue *)sender {
-    [self.session unlinkAll];
+    [GTMOAuth2ViewControllerTouch removeAuthFromKeychainForName:@"Merry-go-round: Dropbox"];
 }
 
 - (IBAction)unwindFromAbout:(UIStoryboardSegue *)sender {

@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <DropboxSDK/DropboxSDK.h>
+#import "GTMOAuth2Authentication.h"
 
 @interface MGRLoginViewController : UIViewController 
 
-@property (nonatomic, strong) DBSession *session;
+@property (strong, nonatomic) GTMOAuth2Authentication *authentication;
 
 @end
 

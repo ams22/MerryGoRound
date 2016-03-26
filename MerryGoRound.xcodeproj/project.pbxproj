@@ -11,6 +11,11 @@
 		853B89641C9DC31300417DC5 /* MGRFolderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 853B89631C9DC31300417DC5 /* MGRFolderCell.m */; };
 		853B89671C9DC32300417DC5 /* MGRPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 853B89661C9DC32300417DC5 /* MGRPhotoCell.m */; };
 		853B896A1C9EA69E00417DC5 /* MGRMetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 853B89691C9EA69E00417DC5 /* MGRMetadataViewController.m */; };
+		857965CD1CA6DE5D00DB3AAB /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 857965CC1CA6DE5D00DB3AAB /* GTMOAuth2Authentication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		857965D21CA6E03500DB3AAB /* GTMSessionFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 857965D11CA6E03500DB3AAB /* GTMSessionFetcher.m */; };
+		857965D71CA6E5EF00DB3AAB /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 857965D51CA6E5EF00DB3AAB /* GTMOAuth2ViewControllerTouch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		857965D81CA6E5EF00DB3AAB /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 857965D61CA6E5EF00DB3AAB /* GTMOAuth2ViewTouch.xib */; };
+		857965DB1CA6E60700DB3AAB /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 857965DA1CA6E60700DB3AAB /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E3298BA41C8C2A5800D337FB /* EXTADT.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B8D1C8C2A5800D337FB /* EXTADT.m */; };
 		E3298BA51C8C2A5800D337FB /* EXTConcreteProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B8F1C8C2A5800D337FB /* EXTConcreteProtocol.m */; };
 		E3298BA61C8C2A5800D337FB /* EXTNil.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B931C8C2A5800D337FB /* EXTNil.m */; };
@@ -85,6 +90,15 @@
 		853B89661C9DC32300417DC5 /* MGRPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRPhotoCell.m; sourceTree = "<group>"; };
 		853B89681C9EA69E00417DC5 /* MGRMetadataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRMetadataViewController.h; sourceTree = "<group>"; };
 		853B89691C9EA69E00417DC5 /* MGRMetadataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRMetadataViewController.m; sourceTree = "<group>"; };
+		857965CB1CA6DE5D00DB3AAB /* GTMOAuth2Authentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2Authentication.h; sourceTree = "<group>"; };
+		857965CC1CA6DE5D00DB3AAB /* GTMOAuth2Authentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2Authentication.m; sourceTree = "<group>"; };
+		857965D01CA6E03500DB3AAB /* GTMSessionFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMSessionFetcher.h; sourceTree = "<group>"; };
+		857965D11CA6E03500DB3AAB /* GTMSessionFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMSessionFetcher.m; sourceTree = "<group>"; };
+		857965D41CA6E5EF00DB3AAB /* GTMOAuth2ViewControllerTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2ViewControllerTouch.h; sourceTree = "<group>"; };
+		857965D51CA6E5EF00DB3AAB /* GTMOAuth2ViewControllerTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2ViewControllerTouch.m; sourceTree = "<group>"; };
+		857965D61CA6E5EF00DB3AAB /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
+		857965D91CA6E60700DB3AAB /* GTMOAuth2SignIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2SignIn.h; sourceTree = "<group>"; };
+		857965DA1CA6E60700DB3AAB /* GTMOAuth2SignIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2SignIn.m; sourceTree = "<group>"; };
 		E3298B881C8C142500D337FB /* MGRBlocksPlaygroundTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRBlocksPlaygroundTests.m; sourceTree = "<group>"; };
 		E3298B8C1C8C2A5800D337FB /* EXTADT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTADT.h; sourceTree = "<group>"; };
 		E3298B8D1C8C2A5800D337FB /* EXTADT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTADT.m; sourceTree = "<group>"; };
@@ -219,11 +233,46 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		857965CA1CA6DE3100DB3AAB /* gtm-oauth2 */ = {
+			isa = PBXGroup;
+			children = (
+				857965D31CA6E5EF00DB3AAB /* Touch */,
+				857965CB1CA6DE5D00DB3AAB /* GTMOAuth2Authentication.h */,
+				857965CC1CA6DE5D00DB3AAB /* GTMOAuth2Authentication.m */,
+				857965D91CA6E60700DB3AAB /* GTMOAuth2SignIn.h */,
+				857965DA1CA6E60700DB3AAB /* GTMOAuth2SignIn.m */,
+			);
+			name = "gtm-oauth2";
+			path = "gtm-oauth2/Source";
+			sourceTree = "<group>";
+		};
+		857965CF1CA6E00D00DB3AAB /* gtm-session-fetcher */ = {
+			isa = PBXGroup;
+			children = (
+				857965D01CA6E03500DB3AAB /* GTMSessionFetcher.h */,
+				857965D11CA6E03500DB3AAB /* GTMSessionFetcher.m */,
+			);
+			name = "gtm-session-fetcher";
+			path = "gtm-session-fetcher/Source";
+			sourceTree = "<group>";
+		};
+		857965D31CA6E5EF00DB3AAB /* Touch */ = {
+			isa = PBXGroup;
+			children = (
+				857965D41CA6E5EF00DB3AAB /* GTMOAuth2ViewControllerTouch.h */,
+				857965D51CA6E5EF00DB3AAB /* GTMOAuth2ViewControllerTouch.m */,
+				857965D61CA6E5EF00DB3AAB /* GTMOAuth2ViewTouch.xib */,
+			);
+			path = Touch;
+			sourceTree = "<group>";
+		};
 		E3298B8A1C8C2A2A00D337FB /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
 				853B895B1C9D749B00417DC5 /* DropboxSDK */,
 				E3298B8B1C8C2A5800D337FB /* extobjc */,
+				857965CA1CA6DE3100DB3AAB /* gtm-oauth2 */,
+				857965CF1CA6E00D00DB3AAB /* gtm-session-fetcher */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -529,6 +578,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				857965D81CA6E5EF00DB3AAB /* GTMOAuth2ViewTouch.xib in Resources */,
 				E3CD95931C82294D00A01D79 /* LaunchScreen.storyboard in Resources */,
 				E3CD95901C82294D00A01D79 /* Assets.xcassets in Resources */,
 				E3CD958E1C82294D00A01D79 /* Main.storyboard in Resources */,
@@ -576,8 +626,11 @@
 				E3298BA91C8C2A5800D337FB /* EXTScope.m in Sources */,
 				E3CD95CA1C82E7AA00A01D79 /* MGRDropboxParser.m in Sources */,
 				E3298BA71C8C2A5800D337FB /* EXTRuntimeExtensions.m in Sources */,
+				857965D21CA6E03500DB3AAB /* GTMSessionFetcher.m in Sources */,
+				857965CD1CA6DE5D00DB3AAB /* GTMOAuth2Authentication.m in Sources */,
 				E3298BA41C8C2A5800D337FB /* EXTADT.m in Sources */,
 				853B89641C9DC31300417DC5 /* MGRFolderCell.m in Sources */,
+				857965DB1CA6E60700DB3AAB /* GTMOAuth2SignIn.m in Sources */,
 				E3CD958B1C82294D00A01D79 /* MGRLoginViewController.m in Sources */,
 				853B89671C9DC32300417DC5 /* MGRPhotoCell.m in Sources */,
 				E3298BA51C8C2A5800D337FB /* EXTConcreteProtocol.m in Sources */,
@@ -593,6 +646,7 @@
 				E3298BAC1C8C2A5800D337FB /* NSMethodSignature+EXT.m in Sources */,
 				E3CD95BF1C822EFF00A01D79 /* MGRFolder.m in Sources */,
 				E3CD95D01C82F5DD00A01D79 /* MGRFolder+MGRDropboxParser.m in Sources */,
+				857965D71CA6E5EF00DB3AAB /* GTMOAuth2ViewControllerTouch.m in Sources */,
 				E3CD95851C82294D00A01D79 /* main.m in Sources */,
 				E3CD95CD1C82F20A00A01D79 /* MGRFile+MGRDropboxParser.m in Sources */,
 				E3298BAA1C8C2A5800D337FB /* EXTSelectorChecking.m in Sources */,
