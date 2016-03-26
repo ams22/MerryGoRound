@@ -14,6 +14,7 @@
 @interface MGRListViewController () <DBRestClientDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) IBOutlet UIView *footerView;
 
 @property (nonatomic, strong) DBRestClient *client;
@@ -26,6 +27,15 @@
 
 - (void)dealloc {
     [self.client cancelAllRequests];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:refreshControl];
+    _refreshControl = refreshControl;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -51,6 +61,12 @@
 }
 
 - (IBAction)unwindFromAbout:(UIStoryboardSegue *)sender {
+}
+
+- (IBAction)refresh:(id)sender {
+    if (self.path) {
+        [self.client loadMetadata:self.path];
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -168,6 +184,7 @@
     self.contents = [self.metadata.contents filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(DBMetadata *  _Nonnull metadata, NSDictionary<NSString *,id> * _Nullable bindings) {
         return [metadata isDirectory] || [metadata thumbnailExists];
     }]];
+    [self.refreshControl endRefreshing];
     [self.tableView reloadData];
 }
 
