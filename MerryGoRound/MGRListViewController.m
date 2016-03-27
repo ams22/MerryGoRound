@@ -131,7 +131,6 @@
         MGRFolderMetadata *folder = (MGRFolderMetadata *)node;
         MGRFolderCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Folder" forIndexPath:indexPath];
         cell.titleLabel.text = folder.name;
-        cell.subtitleLabel.text = folder.identifier;
         return cell;
     }
     else {
