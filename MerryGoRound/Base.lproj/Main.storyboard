@@ -306,7 +306,6 @@
                 </barButtonItem>
                 <barButtonItem title="Информация" id="Q07-16-pTv">
                     <connections>
-                        <action selector="openInfo:" destination="GWO-DJ-g0k" id="guE-a5-r39"/>
                         <segue destination="U5H-n3-5jj" kind="presentation" identifier="ShowMetadata" modalPresentationStyle="formSheet" id="cC2-Rl-B6f"/>
                     </connections>
                 </barButtonItem>
@@ -417,7 +416,7 @@
         <image name="app-logo" width="250" height="167"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JWX-hX-5vu"/>
         <segue reference="Rih-pU-p9B"/>
+        <segue reference="HUJ-43-lMy"/>
     </inferredMetricsTieBreakers>
 </document>
