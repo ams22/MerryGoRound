@@ -18,6 +18,8 @@
 		857965DB1CA6E60700DB3AAB /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 857965DA1CA6E60700DB3AAB /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		857965DE1CA6EDD100DB3AAB /* MGRDropboxSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 857965DD1CA6EDD100DB3AAB /* MGRDropboxSession.m */; };
 		857966221CA7C8E300DB3AAB /* MGRLoginNavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 857966211CA7C8E300DB3AAB /* MGRLoginNavigationControllerDelegate.m */; };
+		857966251CA7DB0A00DB3AAB /* MGRPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 857966241CA7DB0A00DB3AAB /* MGRPhoto.m */; };
+		857966281CA7DD1700DB3AAB /* MGRPhoto+MGRDropboxParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 857966271CA7DD1700DB3AAB /* MGRPhoto+MGRDropboxParser.m */; };
 		E3298BA41C8C2A5800D337FB /* EXTADT.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B8D1C8C2A5800D337FB /* EXTADT.m */; };
 		E3298BA51C8C2A5800D337FB /* EXTConcreteProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B8F1C8C2A5800D337FB /* EXTConcreteProtocol.m */; };
 		E3298BA61C8C2A5800D337FB /* EXTNil.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B931C8C2A5800D337FB /* EXTNil.m */; };
@@ -105,6 +107,10 @@
 		857965DD1CA6EDD100DB3AAB /* MGRDropboxSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRDropboxSession.m; sourceTree = "<group>"; };
 		857966201CA7C8E300DB3AAB /* MGRLoginNavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRLoginNavigationControllerDelegate.h; sourceTree = "<group>"; };
 		857966211CA7C8E300DB3AAB /* MGRLoginNavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRLoginNavigationControllerDelegate.m; sourceTree = "<group>"; };
+		857966231CA7DB0A00DB3AAB /* MGRPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRPhoto.h; sourceTree = "<group>"; };
+		857966241CA7DB0A00DB3AAB /* MGRPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRPhoto.m; sourceTree = "<group>"; };
+		857966261CA7DD1700DB3AAB /* MGRPhoto+MGRDropboxParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MGRPhoto+MGRDropboxParser.h"; sourceTree = "<group>"; };
+		857966271CA7DD1700DB3AAB /* MGRPhoto+MGRDropboxParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MGRPhoto+MGRDropboxParser.m"; sourceTree = "<group>"; };
 		E3298B881C8C142500D337FB /* MGRBlocksPlaygroundTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRBlocksPlaygroundTests.m; sourceTree = "<group>"; };
 		E3298B8C1C8C2A5800D337FB /* EXTADT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTADT.h; sourceTree = "<group>"; };
 		E3298B8D1C8C2A5800D337FB /* EXTADT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTADT.m; sourceTree = "<group>"; };
@@ -445,6 +451,10 @@
 				E3CD95D51C830D1A00A01D79 /* MGRNode.h */,
 				E3298BAD1C8C3B8900D337FB /* MGRNodesManager.h */,
 				E3298BAE1C8C3B8900D337FB /* MGRNodesManager.m */,
+				857966231CA7DB0A00DB3AAB /* MGRPhoto.h */,
+				857966241CA7DB0A00DB3AAB /* MGRPhoto.m */,
+				857966261CA7DD1700DB3AAB /* MGRPhoto+MGRDropboxParser.h */,
+				857966271CA7DD1700DB3AAB /* MGRPhoto+MGRDropboxParser.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -639,6 +649,7 @@
 				857965D21CA6E03500DB3AAB /* GTMSessionFetcher.m in Sources */,
 				857965CD1CA6DE5D00DB3AAB /* GTMOAuth2Authentication.m in Sources */,
 				E3298BA41C8C2A5800D337FB /* EXTADT.m in Sources */,
+				857966281CA7DD1700DB3AAB /* MGRPhoto+MGRDropboxParser.m in Sources */,
 				853B89641C9DC31300417DC5 /* MGRFolderCell.m in Sources */,
 				857965DB1CA6E60700DB3AAB /* GTMOAuth2SignIn.m in Sources */,
 				E3CD958B1C82294D00A01D79 /* MGRLoginViewController.m in Sources */,
@@ -647,6 +658,7 @@
 				E3CD95BC1C822EF200A01D79 /* MGRFile.m in Sources */,
 				E3298BF81C8DCEAB00D337FB /* MGRListViewController.m in Sources */,
 				E3298BFB1C8DCF0100D337FB /* MGRSinglePhotoViewController.m in Sources */,
+				857966251CA7DB0A00DB3AAB /* MGRPhoto.m in Sources */,
 				E3298BA81C8C2A5800D337FB /* EXTSafeCategory.m in Sources */,
 				857966221CA7C8E300DB3AAB /* MGRLoginNavigationControllerDelegate.m in Sources */,
 				E3298BAF1C8C3B8900D337FB /* MGRNodesManager.m in Sources */,
