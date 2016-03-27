@@ -16,6 +16,8 @@
 		857965D71CA6E5EF00DB3AAB /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 857965D51CA6E5EF00DB3AAB /* GTMOAuth2ViewControllerTouch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		857965D81CA6E5EF00DB3AAB /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 857965D61CA6E5EF00DB3AAB /* GTMOAuth2ViewTouch.xib */; };
 		857965DB1CA6E60700DB3AAB /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 857965DA1CA6E60700DB3AAB /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		857965DE1CA6EDD100DB3AAB /* MGRDropboxSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 857965DD1CA6EDD100DB3AAB /* MGRDropboxSession.m */; };
+		857966221CA7C8E300DB3AAB /* MGRLoginNavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 857966211CA7C8E300DB3AAB /* MGRLoginNavigationControllerDelegate.m */; };
 		E3298BA41C8C2A5800D337FB /* EXTADT.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B8D1C8C2A5800D337FB /* EXTADT.m */; };
 		E3298BA51C8C2A5800D337FB /* EXTConcreteProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B8F1C8C2A5800D337FB /* EXTConcreteProtocol.m */; };
 		E3298BA61C8C2A5800D337FB /* EXTNil.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B931C8C2A5800D337FB /* EXTNil.m */; };
@@ -99,6 +101,10 @@
 		857965D61CA6E5EF00DB3AAB /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
 		857965D91CA6E60700DB3AAB /* GTMOAuth2SignIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2SignIn.h; sourceTree = "<group>"; };
 		857965DA1CA6E60700DB3AAB /* GTMOAuth2SignIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2SignIn.m; sourceTree = "<group>"; };
+		857965DC1CA6EDD100DB3AAB /* MGRDropboxSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRDropboxSession.h; sourceTree = "<group>"; };
+		857965DD1CA6EDD100DB3AAB /* MGRDropboxSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRDropboxSession.m; sourceTree = "<group>"; };
+		857966201CA7C8E300DB3AAB /* MGRLoginNavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRLoginNavigationControllerDelegate.h; sourceTree = "<group>"; };
+		857966211CA7C8E300DB3AAB /* MGRLoginNavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRLoginNavigationControllerDelegate.m; sourceTree = "<group>"; };
 		E3298B881C8C142500D337FB /* MGRBlocksPlaygroundTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRBlocksPlaygroundTests.m; sourceTree = "<group>"; };
 		E3298B8C1C8C2A5800D337FB /* EXTADT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTADT.h; sourceTree = "<group>"; };
 		E3298B8D1C8C2A5800D337FB /* EXTADT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTADT.m; sourceTree = "<group>"; };
@@ -338,6 +344,8 @@
 				E3298BFD1C8DCF1000D337FB /* MGRAboutViewController.m */,
 				E3298BF61C8DCEAB00D337FB /* MGRListViewController.h */,
 				E3298BF71C8DCEAB00D337FB /* MGRListViewController.m */,
+				857966201CA7C8E300DB3AAB /* MGRLoginNavigationControllerDelegate.h */,
+				857966211CA7C8E300DB3AAB /* MGRLoginNavigationControllerDelegate.m */,
 				E3CD95891C82294D00A01D79 /* MGRLoginViewController.h */,
 				E3CD958A1C82294D00A01D79 /* MGRLoginViewController.m */,
 				853B89681C9EA69E00417DC5 /* MGRMetadataViewController.h */,
@@ -424,6 +432,8 @@
 				E3CD95C21C822FC900A01D79 /* MGRAbstractNode.m */,
 				E3CD95C81C82E7AA00A01D79 /* MGRDropboxParser.h */,
 				E3CD95C91C82E7AA00A01D79 /* MGRDropboxParser.m */,
+				857965DC1CA6EDD100DB3AAB /* MGRDropboxSession.h */,
+				857965DD1CA6EDD100DB3AAB /* MGRDropboxSession.m */,
 				E3CD95BA1C822EF200A01D79 /* MGRFile.h */,
 				E3CD95BB1C822EF200A01D79 /* MGRFile.m */,
 				E3CD95CB1C82F20A00A01D79 /* MGRFile+MGRDropboxParser.h */,
@@ -638,6 +648,7 @@
 				E3298BF81C8DCEAB00D337FB /* MGRListViewController.m in Sources */,
 				E3298BFB1C8DCF0100D337FB /* MGRSinglePhotoViewController.m in Sources */,
 				E3298BA81C8C2A5800D337FB /* EXTSafeCategory.m in Sources */,
+				857966221CA7C8E300DB3AAB /* MGRLoginNavigationControllerDelegate.m in Sources */,
 				E3298BAF1C8C3B8900D337FB /* MGRNodesManager.m in Sources */,
 				853B896A1C9EA69E00417DC5 /* MGRMetadataViewController.m in Sources */,
 				E3298BFE1C8DCF1000D337FB /* MGRAboutViewController.m in Sources */,
@@ -645,6 +656,7 @@
 				E3CD95881C82294D00A01D79 /* AppDelegate.m in Sources */,
 				E3298BAC1C8C2A5800D337FB /* NSMethodSignature+EXT.m in Sources */,
 				E3CD95BF1C822EFF00A01D79 /* MGRFolder.m in Sources */,
+				857965DE1CA6EDD100DB3AAB /* MGRDropboxSession.m in Sources */,
 				E3CD95D01C82F5DD00A01D79 /* MGRFolder+MGRDropboxParser.m in Sources */,
 				857965D71CA6E5EF00DB3AAB /* GTMOAuth2ViewControllerTouch.m in Sources */,
 				E3CD95851C82294D00A01D79 /* main.m in Sources */,

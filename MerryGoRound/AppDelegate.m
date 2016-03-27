@@ -7,13 +7,12 @@
 //
 
 #import "AppDelegate.h"
-#import <DropboxSDK/DropboxSDK.h>
+#import "MGRDropboxSession.h"
 #import "MGRLoginViewController.h"
-#import "GTMOAuth2ViewControllerTouch.h"
 
 @interface AppDelegate ()
 
-@property (nonatomic, strong) DBSession *session;
+@property (nonatomic, strong) MGRDropboxSession *session;
 
 @end
 
@@ -21,24 +20,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.session = [[DBSession alloc] initWithAppKey:@"yoykfhbr69abubo" appSecret:@"jzgj6imeiop5t6w" root:kDBRootDropbox];
+    self.session = [[MGRDropboxSession alloc] initWithAppKey:@"yoykfhbr69abubo" appSecret:@"jzgj6imeiop5t6w"];
 
     UINavigationController *rootViewController = (UINavigationController *)self.window.rootViewController;
     MGRLoginViewController *loginController = (MGRLoginViewController *)rootViewController.viewControllers.firstObject;
-
-    NSURL *tokenURL = [NSURL URLWithString:@"https://api.dropboxapi.com/1/oauth2/token"];
-    NSString *redirectURLString = @"http://localhost/oauthcallback";
-
-    GTMOAuth2Authentication *authentication =
-    [GTMOAuth2Authentication authenticationWithServiceProvider:@"Dropbox"
-                                                      tokenURL:tokenURL
-                                                   redirectURI:redirectURLString
-                                                      clientID:@"yoykfhbr69abubo"
-                                                  clientSecret:@"jzgj6imeiop5t6w"];
-    [GTMOAuth2ViewControllerTouch authorizeFromKeychainForName:@"Merry-go-round: Dropbox"
-                                                authentication:authentication
-                                                         error:NULL];
-    loginController.authentication = authentication;
+    loginController.session = self.session;
 
     return YES;
 }
@@ -63,20 +49,6 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    if ([self.session handleOpenURL:url]) {
-        return YES;
-    }
-    return NO;
-}
-
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
-    if ([self.session handleOpenURL:url]) {
-        return YES;
-    }
-    return NO;
 }
 
 @end

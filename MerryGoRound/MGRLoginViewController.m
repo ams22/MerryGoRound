@@ -8,7 +8,7 @@
 
 #import "MGRLoginViewController.h"
 #import "MGRListViewController.h"
-#import "GTMOAuth2ViewControllerTouch.h"
+#import "EXTScope.h"
 
 @interface MGRLoginViewController ()
 
@@ -28,7 +28,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
-    if ([self.authentication canAuthorize]) {
+    if (self.session.linked) {
         [self performSegueWithIdentifier:@"Photos" sender:nil];
     }
 }
@@ -39,21 +39,16 @@
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
     if ([identifier isEqualToString:@"Photos"]) {
-        if (![self.authentication canAuthorize]) {
-            NSURL *authorizationURL = [NSURL URLWithString:@"https://www.dropbox.com/1/oauth2/authorize"];
-
-            GTMOAuth2ViewControllerTouch *controller =
-            [[GTMOAuth2ViewControllerTouch alloc] initWithAuthentication:self.authentication
-                                                        authorizationURL:authorizationURL
-                                                        keychainItemName:@"Merry-go-round: Dropbox"
-                                                       completionHandler:
-             ^(GTMOAuth2ViewControllerTouch *viewController, GTMOAuth2Authentication *auth, NSError *error) {
-                 [self.navigationController setNavigationBarHidden:YES animated:YES];
-             }];
-            controller.navigationItem.title = @"Вход";
-            [self.navigationController setNavigationBarHidden:NO animated:YES];
-            [self.navigationController pushViewController:controller animated:YES];
-
+        if (!self.session.linked) {
+            self.loginButton.enabled = NO;
+            @weakify(self);
+            [self.session linkFromNavigationController:self.navigationController completion:^{
+                @strongify(self);
+                self.loginButton.enabled = YES;
+                if (self.session.linked) {
+                    [self performSegueWithIdentifier:@"Photos" sender:nil];
+                }
+            }];
             return NO;
         }
     }
@@ -64,13 +59,13 @@
     if ([segue.identifier isEqualToString:@"Photos"]) {
         UINavigationController *destination = segue.destinationViewController;
         MGRListViewController *controller = destination.viewControllers.firstObject;
-//        controller.session = self.session;
-        controller.path = @"/";
+        controller.session = self.session;
+        controller.path = @""; // Root folder
     }
 }
 
 - (IBAction)unwindToLogin:(UIStoryboardSegue *)sender {
-    [GTMOAuth2ViewControllerTouch removeAuthFromKeychainForName:@"Merry-go-round: Dropbox"];
+    [self.session unlink];
 }
 
 - (IBAction)unwindFromAbout:(UIStoryboardSegue *)sender {

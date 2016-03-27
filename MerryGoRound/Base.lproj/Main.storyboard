@@ -16,10 +16,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
+                        <outlet property="delegate" destination="y2B-Dc-gCo" id="USQ-8R-gkB"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TL4-dt-pYJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vKd-Es-Uhf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="y2B-Dc-gCo" customClass="MGRLoginNavigationControllerDelegate"/>
             </objects>
             <point key="canvasLocation" x="-520" y="339"/>
         </scene>
