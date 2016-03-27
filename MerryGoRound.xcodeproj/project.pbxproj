@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8532A9D81CA82AE900019E22 /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857966841CA8298600DB3AAB /* Mantle.framework */; };
 		853B89641C9DC31300417DC5 /* MGRFolderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 853B89631C9DC31300417DC5 /* MGRFolderCell.m */; };
 		853B89671C9DC32300417DC5 /* MGRPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 853B89661C9DC32300417DC5 /* MGRPhotoCell.m */; };
 		853B896A1C9EA69E00417DC5 /* MGRMetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 853B89691C9EA69E00417DC5 /* MGRMetadataViewController.m */; };
@@ -63,6 +64,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8579667F1CA8298600DB3AAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 857966781CA8298600DB3AAB /* Mantle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D042FC3C15F72B23004E8054;
+			remoteInfo = "Mantle-Mac";
+		};
+		857966811CA8298600DB3AAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 857966781CA8298600DB3AAB /* Mantle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D042FC5415F72B23004E8054;
+			remoteInfo = "Mantle-MacTests";
+		};
+		857966831CA8298600DB3AAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 857966781CA8298600DB3AAB /* Mantle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0E9C35719F6DB38000D427D;
+			remoteInfo = "Mantle-iOS";
+		};
+		857966851CA8298600DB3AAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 857966781CA8298600DB3AAB /* Mantle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0E9C36119F6DB38000D427D;
+			remoteInfo = "Mantle-iOSTests";
+		};
 		E3298BE51C8DC89400D337FB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E3CD95781C82294C00A01D79 /* Project object */;
@@ -112,6 +141,7 @@
 		857966241CA7DB0A00DB3AAB /* MGRPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRPhoto.m; sourceTree = "<group>"; };
 		857966261CA7DD1700DB3AAB /* MGRPhoto+MGRDropboxParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MGRPhoto+MGRDropboxParser.h"; sourceTree = "<group>"; };
 		857966271CA7DD1700DB3AAB /* MGRPhoto+MGRDropboxParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MGRPhoto+MGRDropboxParser.m"; sourceTree = "<group>"; };
+		857966781CA8298600DB3AAB /* Mantle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Mantle.xcodeproj; sourceTree = "<group>"; };
 		E3298B881C8C142500D337FB /* MGRBlocksPlaygroundTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRBlocksPlaygroundTests.m; sourceTree = "<group>"; };
 		E3298B8C1C8C2A5800D337FB /* EXTADT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTADT.h; sourceTree = "<group>"; };
 		E3298B8D1C8C2A5800D337FB /* EXTADT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTADT.m; sourceTree = "<group>"; };
@@ -206,6 +236,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8532A9D81CA82AE900019E22 /* Mantle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,12 +301,32 @@
 			path = Touch;
 			sourceTree = "<group>";
 		};
+		857966771CA8296C00DB3AAB /* Mantle */ = {
+			isa = PBXGroup;
+			children = (
+				857966781CA8298600DB3AAB /* Mantle.xcodeproj */,
+			);
+			path = Mantle;
+			sourceTree = "<group>";
+		};
+		857966791CA8298600DB3AAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				857966801CA8298600DB3AAB /* Mantle.framework */,
+				857966821CA8298600DB3AAB /* Mantle-MacTests.xctest */,
+				857966841CA8298600DB3AAB /* Mantle.framework */,
+				857966861CA8298600DB3AAB /* Mantle-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		E3298B8A1C8C2A2A00D337FB /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
 				E3298B8B1C8C2A5800D337FB /* extobjc */,
 				857965CA1CA6DE3100DB3AAB /* gtm-oauth2 */,
 				857965CF1CA6E00D00DB3AAB /* gtm-session-fetcher */,
+				857966771CA8296C00DB3AAB /* Mantle */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -360,8 +411,8 @@
 				E3298BE11C8DC89400D337FB /* MerryGoRoundPlaygroundTests */,
 				E3CD959C1C82294D00A01D79 /* MerryGoRoundTests */,
 				E3CD95A71C82294D00A01D79 /* MerryGoRoundUITests */,
-				E3CD95811C82294D00A01D79 /* Products */,
 				E3298B8A1C8C2A2A00D337FB /* ThirdParty */,
+				E3CD95811C82294D00A01D79 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -567,6 +618,12 @@
 			mainGroup = E3CD95771C82294C00A01D79;
 			productRefGroup = E3CD95811C82294D00A01D79 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 857966791CA8298600DB3AAB /* Products */;
+					ProjectRef = 857966781CA8298600DB3AAB /* Mantle.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E3CD957F1C82294C00A01D79 /* MerryGoRound */,
@@ -576,6 +633,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		857966801CA8298600DB3AAB /* Mantle.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Mantle.framework;
+			remoteRef = 8579667F1CA8298600DB3AAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		857966821CA8298600DB3AAB /* Mantle-MacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Mantle-MacTests.xctest";
+			remoteRef = 857966811CA8298600DB3AAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		857966841CA8298600DB3AAB /* Mantle.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Mantle.framework;
+			remoteRef = 857966831CA8298600DB3AAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		857966861CA8298600DB3AAB /* Mantle-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Mantle-iOSTests.xctest";
+			remoteRef = 857966851CA8298600DB3AAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E3298BDE1C8DC89400D337FB /* Resources */ = {
