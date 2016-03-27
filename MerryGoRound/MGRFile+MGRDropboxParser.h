@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (nullable instancetype)initWithJSONObject:(id)JSONObject error:(NSError * _Nullable *)error;
 
++ (NSDateFormatter *)dateFormatter;
+
 @end
 
 NS_ASSUME_NONNULL_END

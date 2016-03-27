@@ -31,6 +31,10 @@
     return self;
 }
 
+- (BOOL)isDirectory {
+    return NO;
+}
+
 - (NSUInteger)hash {
     return self.dropboxID.hash ^ self.name.hash ^ self.path.hash;
 }

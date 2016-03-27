@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <DropboxSDK/DropboxSDK.h>
+#import "MGRDropboxSession.h"
 
 @interface MGRLoginViewController : UIViewController 
 
-@property (nonatomic, strong) DBSession *session;
+@property (strong, nonatomic) MGRDropboxSession *session;
 
 @end
 

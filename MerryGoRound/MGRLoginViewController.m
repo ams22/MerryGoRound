@@ -8,7 +8,7 @@
 
 #import "MGRLoginViewController.h"
 #import "MGRListViewController.h"
-#import <DropboxSDK/DropboxSDK.h>
+#import "EXTScope.h"
 
 @interface MGRLoginViewController ()
 
@@ -27,7 +27,8 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    if ([self.session isLinked]) {
+
+    if (self.session.linked) {
         [self performSegueWithIdentifier:@"Photos" sender:nil];
     }
 }
@@ -38,8 +39,16 @@
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
     if ([identifier isEqualToString:@"Photos"]) {
-        if (![self.session isLinked]) {
-            [self.session linkFromController:self];
+        if (!self.session.linked) {
+            self.loginButton.enabled = NO;
+            @weakify(self);
+            [self.session linkFromNavigationController:self.navigationController completion:^{
+                @strongify(self);
+                self.loginButton.enabled = YES;
+                if (self.session.linked) {
+                    [self performSegueWithIdentifier:@"Photos" sender:nil];
+                }
+            }];
             return NO;
         }
     }
@@ -51,12 +60,12 @@
         UINavigationController *destination = segue.destinationViewController;
         MGRListViewController *controller = destination.viewControllers.firstObject;
         controller.session = self.session;
-        controller.path = @"/";
+        controller.path = @""; // Root folder
     }
 }
 
 - (IBAction)unwindToLogin:(UIStoryboardSegue *)sender {
-    [self.session unlinkAll];
+    [self.session unlink];
 }
 
 - (IBAction)unwindFromAbout:(UIStoryboardSegue *)sender {

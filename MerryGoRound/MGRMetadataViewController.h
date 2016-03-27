@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <DropboxSDK/DropboxSDK.h>
+#import "MGRDropboxSession.h"
 
 @interface MGRMetadataViewController : UIViewController
 
-@property (nonatomic, strong) DBSession *session;
+@property (nonatomic, strong) MGRDropboxSession *session;
 @property (nonatomic, copy) NSString *path;
 
 @end

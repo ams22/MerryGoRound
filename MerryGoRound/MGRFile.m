@@ -28,6 +28,15 @@
     return self;
 }
 
+- (BOOL)isDirectory {
+    return NO;
+}
+
+- (BOOL)isImage {
+    NSSet<NSString *> *imageExtensions = [NSSet setWithObjects:@"jpg", @"jpeg", @"png", @"tiff", @"tif", @"gif", @"bmp", nil];
+    return [imageExtensions containsObject:self.path.pathExtension.lowercaseString];
+}
+
 - (NSUInteger)hash {
     return [super hash] ^ self.clientModified.hash ^ @(self.size).hash;
 }

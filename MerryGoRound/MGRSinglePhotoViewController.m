@@ -8,25 +8,24 @@
 
 #import "MGRSinglePhotoViewController.h"
 #import "MGRMetadataViewController.h"
+#import "MGRDropboxClient.h"
+#import "MGRFile.h"
+#import "EXTScope.h"
 
-@interface MGRSinglePhotoViewController () <DBRestClientDelegate>
+@interface MGRSinglePhotoViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *aboutItem;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *infoItem;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *shareItem;
 
-@property (nonatomic, strong) DBRestClient *client;
-@property (nonatomic, strong) DBMetadata *metadata;
+@property (nonatomic, strong) MGRDropboxClient *dropbox;
+@property (nonatomic, strong) MGRFile *file;
 @property (nonatomic, strong) UIImage *image;
 
 @end
 
 @implementation MGRSinglePhotoViewController
-
-- (void)dealloc {
-    [self.client cancelAllRequests];
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,8 +42,7 @@
     [super viewWillAppear:animated];
 
     if (self.session) {
-        self.client = [[DBRestClient alloc] initWithSession:self.session];
-        self.client.delegate = self;
+        self.dropbox = [[MGRDropboxClient alloc] initWithSession:self.session];
     }
 
     self.photoView.image = nil;
@@ -52,10 +50,25 @@
         self.image = [UIImage imageWithContentsOfFile:[self photoPathWithPath:self.path]];
         self.photoView.image = self.image;
         if (!self.image) {
-            [self.client loadFile:self.path intoPath:[self photoPathWithPath:self.path]];
+            @weakify(self);
+            [self.dropbox downloadPath:self.path
+                            saveToPath:[self photoPathWithPath:self.path]
+                           resultBlock:
+             ^(NSData * _Nullable data, NSError * _Nullable error) {
+                 @strongify(self);
+                 if (data) {
+                     self.image = [UIImage imageWithData:data];
+                     self.photoView.image = self.image;
+                 }
+             }];
         }
 
-        [self.client loadMetadata:self.path];
+        @weakify(self);
+        [self.dropbox getMetadataWithPath:self.path resultBlock:^(id<MGRNode>  _Nullable node, NSError * _Nullable error) {
+            @strongify(self);
+            self.file = node;
+            self.title = node.name;
+        }];
     }
 
     [self.navigationController setToolbarHidden:NO animated:animated];
@@ -67,16 +80,11 @@
     [self.navigationController setToolbarHidden:YES animated:animated];
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    [self.client cancelAllRequests];
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"ShowMetadata"]) {
         MGRMetadataViewController *controller = segue.destinationViewController;
         controller.session = self.session;
-        controller.path = [self.metadata path];
+        controller.path = self.file.path;
     }
 }
 
@@ -107,30 +115,12 @@
 - (IBAction)unwindFromMetadata:(UIStoryboardSegue *)sender {
 }
 
-- (IBAction)openInfo:(id)sender {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:[NSString stringWithFormat:@"%s", __PRETTY_FUNCTION__] preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
-    [self presentViewController:alert animated:YES completion:nil];
-}
-
 - (IBAction)openShare:(id)sender {
     if (self.image) {
         UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:@[ self.image ] applicationActivities:nil];
         [self presentViewController:controller animated:YES completion:nil];
         controller.popoverPresentationController.barButtonItem = sender;
     }
-}
-
-#pragma mark - DBRestClientDelegate
-
-- (void)restClient:(DBRestClient *)client loadedFile:(NSString *)destPath {
-    self.image = [UIImage imageWithContentsOfFile:destPath];
-    self.photoView.image = self.image;
-}
-
-- (void)restClient:(DBRestClient *)client loadedMetadata:(DBMetadata *)metadata {
-    self.metadata = metadata;
-    self.title = [metadata filename];
 }
 
 @end

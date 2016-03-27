@@ -24,6 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly, copy) NSDate *clientModified;
 @property (nonatomic, readonly) NSUInteger size;
+@property (nonatomic, readonly, getter=isImage) BOOL image;
+
+- (BOOL)isEqualToFile:(MGRFile *)file;
 
 @end
 

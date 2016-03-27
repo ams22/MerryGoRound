@@ -28,6 +28,8 @@ typedef NS_ENUM(NSUInteger, MGRDropboxParserError) {
  */
 - (nullable NSArray<id<MGRNode>> *)nodesFromJSONObject:(id)JSONObject error:(NSError * _Nullable *)error;
 
+- (nullable id<MGRNode>)nodeFromJSONObject:(id)JSONObject error:(NSError * _Nullable *)error;
+
 @end
 
 NS_ASSUME_NONNULL_END
