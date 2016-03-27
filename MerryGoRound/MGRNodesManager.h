@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MGRNode.h"
+#import "MGRMetadata.h"
 
 @class MGRNodesManager;
 
@@ -18,7 +18,7 @@
 @interface MGRNodesManager : NSObject
 
 @property (nonatomic, weak) id<MGRNodesManagerDelegate> delegate;
-@property (nonatomic, readonly, copy) NSArray<id<MGRNode>> *nodes;
+@property (nonatomic, readonly, copy) NSArray<MGRMetadata *> *nodes;
 
 - (void)refresh;
 

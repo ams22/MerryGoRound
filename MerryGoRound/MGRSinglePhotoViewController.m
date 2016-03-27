@@ -9,7 +9,7 @@
 #import "MGRSinglePhotoViewController.h"
 #import "MGRMetadataViewController.h"
 #import "MGRDropboxClient.h"
-#import "MGRFile.h"
+#import "MGRFileMetadata.h"
 #import "EXTScope.h"
 
 @interface MGRSinglePhotoViewController ()
@@ -20,7 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *shareItem;
 
 @property (nonatomic, strong) MGRDropboxClient *dropbox;
-@property (nonatomic, strong) MGRFile *file;
+@property (nonatomic, strong) MGRFileMetadata *file;
 @property (nonatomic, strong) UIImage *image;
 
 @end
@@ -64,7 +64,7 @@
         }
 
         @weakify(self);
-        [self.dropbox getMetadataWithPath:self.path resultBlock:^(id<MGRNode>  _Nullable node, NSError * _Nullable error) {
+        [self.dropbox getMetadataWithPath:self.path resultBlock:^(MGRFileMetadata * _Nullable node, NSError * _Nullable error) {
             @strongify(self);
             self.file = node;
             self.title = node.name;

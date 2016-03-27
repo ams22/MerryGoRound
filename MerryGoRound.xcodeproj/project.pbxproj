@@ -19,8 +19,14 @@
 		857965DB1CA6E60700DB3AAB /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 857965DA1CA6E60700DB3AAB /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		857965DE1CA6EDD100DB3AAB /* MGRDropboxSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 857965DD1CA6EDD100DB3AAB /* MGRDropboxSession.m */; };
 		857966221CA7C8E300DB3AAB /* MGRLoginNavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 857966211CA7C8E300DB3AAB /* MGRLoginNavigationControllerDelegate.m */; };
-		857966251CA7DB0A00DB3AAB /* MGRPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 857966241CA7DB0A00DB3AAB /* MGRPhoto.m */; };
-		857966281CA7DD1700DB3AAB /* MGRPhoto+MGRDropboxParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 857966271CA7DD1700DB3AAB /* MGRPhoto+MGRDropboxParser.m */; };
+		857966611CA8184A00DB3AAB /* MGRFileMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 857966601CA8184A00DB3AAB /* MGRFileMetadata.m */; };
+		857966641CA8192100DB3AAB /* MGRMediaMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 857966631CA8192100DB3AAB /* MGRMediaMetadata.m */; };
+		857966671CA8195300DB3AAB /* MGRPhotoMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 857966661CA8195300DB3AAB /* MGRPhotoMetadata.m */; };
+		8579666A1CA8197300DB3AAB /* MGRDimensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 857966691CA8197300DB3AAB /* MGRDimensions.m */; };
+		8579666D1CA819E000DB3AAB /* MGRGPSCoordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = 8579666C1CA819E000DB3AAB /* MGRGPSCoordinates.m */; };
+		857966701CA8205A00DB3AAB /* MGRDropboxParserUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8579666F1CA8205A00DB3AAB /* MGRDropboxParserUtilities.m */; };
+		857966731CA821D900DB3AAB /* MGRFolderMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 857966721CA821D900DB3AAB /* MGRFolderMetadata.m */; };
+		857966761CA822A900DB3AAB /* MGRMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 857966751CA822A900DB3AAB /* MGRMetadata.m */; };
 		E3298BA41C8C2A5800D337FB /* EXTADT.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B8D1C8C2A5800D337FB /* EXTADT.m */; };
 		E3298BA51C8C2A5800D337FB /* EXTConcreteProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B8F1C8C2A5800D337FB /* EXTConcreteProtocol.m */; };
 		E3298BA61C8C2A5800D337FB /* EXTNil.m in Sources */ = {isa = PBXBuildFile; fileRef = E3298B931C8C2A5800D337FB /* EXTNil.m */; };
@@ -51,14 +57,9 @@
 		E3CD95901C82294D00A01D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3CD958F1C82294D00A01D79 /* Assets.xcassets */; };
 		E3CD95931C82294D00A01D79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3CD95911C82294D00A01D79 /* LaunchScreen.storyboard */; };
 		E3CD95A91C82294D00A01D79 /* MerryGoRoundUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95A81C82294D00A01D79 /* MerryGoRoundUITests.m */; };
-		E3CD95BC1C822EF200A01D79 /* MGRFile.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95BB1C822EF200A01D79 /* MGRFile.m */; };
-		E3CD95BF1C822EFF00A01D79 /* MGRFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95BE1C822EFF00A01D79 /* MGRFolder.m */; };
-		E3CD95C31C822FC900A01D79 /* MGRAbstractNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95C21C822FC900A01D79 /* MGRAbstractNode.m */; };
 		E3CD95C51C8232BB00A01D79 /* list_folder.json in Resources */ = {isa = PBXBuildFile; fileRef = E3CD95C41C8232BB00A01D79 /* list_folder.json */; };
 		E3CD95C71C8232E200A01D79 /* MGRNodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95C61C8232E200A01D79 /* MGRNodeTests.m */; };
 		E3CD95CA1C82E7AA00A01D79 /* MGRDropboxParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95C91C82E7AA00A01D79 /* MGRDropboxParser.m */; };
-		E3CD95CD1C82F20A00A01D79 /* MGRFile+MGRDropboxParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95CC1C82F20A00A01D79 /* MGRFile+MGRDropboxParser.m */; };
-		E3CD95D01C82F5DD00A01D79 /* MGRFolder+MGRDropboxParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95CF1C82F5DD00A01D79 /* MGRFolder+MGRDropboxParser.m */; };
 		E3CD95D21C83025700A01D79 /* MGRDropboxParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD95D11C83025700A01D79 /* MGRDropboxParserTests.m */; };
 		E3CD95D41C8308B600A01D79 /* list_folder2.json in Resources */ = {isa = PBXBuildFile; fileRef = E3CD95D31C8308B600A01D79 /* list_folder2.json */; };
 /* End PBXBuildFile section */
@@ -137,10 +138,22 @@
 		857965DD1CA6EDD100DB3AAB /* MGRDropboxSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRDropboxSession.m; sourceTree = "<group>"; };
 		857966201CA7C8E300DB3AAB /* MGRLoginNavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRLoginNavigationControllerDelegate.h; sourceTree = "<group>"; };
 		857966211CA7C8E300DB3AAB /* MGRLoginNavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRLoginNavigationControllerDelegate.m; sourceTree = "<group>"; };
-		857966231CA7DB0A00DB3AAB /* MGRPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRPhoto.h; sourceTree = "<group>"; };
-		857966241CA7DB0A00DB3AAB /* MGRPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRPhoto.m; sourceTree = "<group>"; };
-		857966261CA7DD1700DB3AAB /* MGRPhoto+MGRDropboxParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MGRPhoto+MGRDropboxParser.h"; sourceTree = "<group>"; };
-		857966271CA7DD1700DB3AAB /* MGRPhoto+MGRDropboxParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MGRPhoto+MGRDropboxParser.m"; sourceTree = "<group>"; };
+		8579665F1CA8184A00DB3AAB /* MGRFileMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRFileMetadata.h; sourceTree = "<group>"; };
+		857966601CA8184A00DB3AAB /* MGRFileMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRFileMetadata.m; sourceTree = "<group>"; };
+		857966621CA8192100DB3AAB /* MGRMediaMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRMediaMetadata.h; sourceTree = "<group>"; };
+		857966631CA8192100DB3AAB /* MGRMediaMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRMediaMetadata.m; sourceTree = "<group>"; };
+		857966651CA8195300DB3AAB /* MGRPhotoMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRPhotoMetadata.h; sourceTree = "<group>"; };
+		857966661CA8195300DB3AAB /* MGRPhotoMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRPhotoMetadata.m; sourceTree = "<group>"; };
+		857966681CA8197300DB3AAB /* MGRDimensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRDimensions.h; sourceTree = "<group>"; };
+		857966691CA8197300DB3AAB /* MGRDimensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRDimensions.m; sourceTree = "<group>"; };
+		8579666B1CA819E000DB3AAB /* MGRGPSCoordinates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRGPSCoordinates.h; sourceTree = "<group>"; };
+		8579666C1CA819E000DB3AAB /* MGRGPSCoordinates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRGPSCoordinates.m; sourceTree = "<group>"; };
+		8579666E1CA8205A00DB3AAB /* MGRDropboxParserUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRDropboxParserUtilities.h; sourceTree = "<group>"; };
+		8579666F1CA8205A00DB3AAB /* MGRDropboxParserUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRDropboxParserUtilities.m; sourceTree = "<group>"; };
+		857966711CA821D900DB3AAB /* MGRFolderMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRFolderMetadata.h; sourceTree = "<group>"; };
+		857966721CA821D900DB3AAB /* MGRFolderMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRFolderMetadata.m; sourceTree = "<group>"; };
+		857966741CA822A900DB3AAB /* MGRMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRMetadata.h; sourceTree = "<group>"; };
+		857966751CA822A900DB3AAB /* MGRMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRMetadata.m; sourceTree = "<group>"; };
 		857966781CA8298600DB3AAB /* Mantle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Mantle.xcodeproj; sourceTree = "<group>"; };
 		E3298B881C8C142500D337FB /* MGRBlocksPlaygroundTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRBlocksPlaygroundTests.m; sourceTree = "<group>"; };
 		E3298B8C1C8C2A5800D337FB /* EXTADT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTADT.h; sourceTree = "<group>"; };
@@ -205,23 +218,12 @@
 		E3CD95A41C82294D00A01D79 /* MerryGoRoundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MerryGoRoundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3CD95A81C82294D00A01D79 /* MerryGoRoundUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MerryGoRoundUITests.m; sourceTree = "<group>"; };
 		E3CD95AA1C82294D00A01D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E3CD95BA1C822EF200A01D79 /* MGRFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRFile.h; sourceTree = "<group>"; };
-		E3CD95BB1C822EF200A01D79 /* MGRFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRFile.m; sourceTree = "<group>"; };
-		E3CD95BD1C822EFF00A01D79 /* MGRFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRFolder.h; sourceTree = "<group>"; };
-		E3CD95BE1C822EFF00A01D79 /* MGRFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRFolder.m; sourceTree = "<group>"; };
-		E3CD95C11C822FC900A01D79 /* MGRAbstractNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRAbstractNode.h; sourceTree = "<group>"; };
-		E3CD95C21C822FC900A01D79 /* MGRAbstractNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRAbstractNode.m; sourceTree = "<group>"; };
 		E3CD95C41C8232BB00A01D79 /* list_folder.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = list_folder.json; sourceTree = "<group>"; };
 		E3CD95C61C8232E200A01D79 /* MGRNodeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRNodeTests.m; sourceTree = "<group>"; };
 		E3CD95C81C82E7AA00A01D79 /* MGRDropboxParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRDropboxParser.h; sourceTree = "<group>"; };
 		E3CD95C91C82E7AA00A01D79 /* MGRDropboxParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRDropboxParser.m; sourceTree = "<group>"; };
-		E3CD95CB1C82F20A00A01D79 /* MGRFile+MGRDropboxParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MGRFile+MGRDropboxParser.h"; sourceTree = "<group>"; };
-		E3CD95CC1C82F20A00A01D79 /* MGRFile+MGRDropboxParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MGRFile+MGRDropboxParser.m"; sourceTree = "<group>"; };
-		E3CD95CE1C82F5DD00A01D79 /* MGRFolder+MGRDropboxParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MGRFolder+MGRDropboxParser.h"; sourceTree = "<group>"; };
-		E3CD95CF1C82F5DD00A01D79 /* MGRFolder+MGRDropboxParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MGRFolder+MGRDropboxParser.m"; sourceTree = "<group>"; };
 		E3CD95D11C83025700A01D79 /* MGRDropboxParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRDropboxParserTests.m; sourceTree = "<group>"; };
 		E3CD95D31C8308B600A01D79 /* list_folder2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = list_folder2.json; sourceTree = "<group>"; };
-		E3CD95D51C830D1A00A01D79 /* MGRNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRNode.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,6 +301,29 @@
 				857965D61CA6E5EF00DB3AAB /* GTMOAuth2ViewTouch.xib */,
 			);
 			path = Touch;
+			sourceTree = "<group>";
+		};
+		8579665E1CA8183300DB3AAB /* Dropbox */ = {
+			isa = PBXGroup;
+			children = (
+				857966681CA8197300DB3AAB /* MGRDimensions.h */,
+				857966691CA8197300DB3AAB /* MGRDimensions.m */,
+				8579666E1CA8205A00DB3AAB /* MGRDropboxParserUtilities.h */,
+				8579666F1CA8205A00DB3AAB /* MGRDropboxParserUtilities.m */,
+				8579665F1CA8184A00DB3AAB /* MGRFileMetadata.h */,
+				857966601CA8184A00DB3AAB /* MGRFileMetadata.m */,
+				857966711CA821D900DB3AAB /* MGRFolderMetadata.h */,
+				857966721CA821D900DB3AAB /* MGRFolderMetadata.m */,
+				8579666B1CA819E000DB3AAB /* MGRGPSCoordinates.h */,
+				8579666C1CA819E000DB3AAB /* MGRGPSCoordinates.m */,
+				857966621CA8192100DB3AAB /* MGRMediaMetadata.h */,
+				857966631CA8192100DB3AAB /* MGRMediaMetadata.m */,
+				857966741CA822A900DB3AAB /* MGRMetadata.h */,
+				857966751CA822A900DB3AAB /* MGRMetadata.m */,
+				857966651CA8195300DB3AAB /* MGRPhotoMetadata.h */,
+				857966661CA8195300DB3AAB /* MGRPhotoMetadata.m */,
+			);
+			name = Dropbox;
 			sourceTree = "<group>";
 		};
 		857966771CA8296C00DB3AAB /* Mantle */ = {
@@ -476,29 +501,15 @@
 		E3CD95B61C822AB900A01D79 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E3CD95C11C822FC900A01D79 /* MGRAbstractNode.h */,
-				E3CD95C21C822FC900A01D79 /* MGRAbstractNode.m */,
+				8579665E1CA8183300DB3AAB /* Dropbox */,
 				857965C71CA6C3E100DB3AAB /* MGRDropboxClient.h */,
 				857965C81CA6C3E100DB3AAB /* MGRDropboxClient.m */,
 				E3CD95C81C82E7AA00A01D79 /* MGRDropboxParser.h */,
 				E3CD95C91C82E7AA00A01D79 /* MGRDropboxParser.m */,
 				857965DC1CA6EDD100DB3AAB /* MGRDropboxSession.h */,
 				857965DD1CA6EDD100DB3AAB /* MGRDropboxSession.m */,
-				E3CD95BA1C822EF200A01D79 /* MGRFile.h */,
-				E3CD95BB1C822EF200A01D79 /* MGRFile.m */,
-				E3CD95CB1C82F20A00A01D79 /* MGRFile+MGRDropboxParser.h */,
-				E3CD95CC1C82F20A00A01D79 /* MGRFile+MGRDropboxParser.m */,
-				E3CD95BD1C822EFF00A01D79 /* MGRFolder.h */,
-				E3CD95BE1C822EFF00A01D79 /* MGRFolder.m */,
-				E3CD95CE1C82F5DD00A01D79 /* MGRFolder+MGRDropboxParser.h */,
-				E3CD95CF1C82F5DD00A01D79 /* MGRFolder+MGRDropboxParser.m */,
-				E3CD95D51C830D1A00A01D79 /* MGRNode.h */,
 				E3298BAD1C8C3B8900D337FB /* MGRNodesManager.h */,
 				E3298BAE1C8C3B8900D337FB /* MGRNodesManager.m */,
-				857966231CA7DB0A00DB3AAB /* MGRPhoto.h */,
-				857966241CA7DB0A00DB3AAB /* MGRPhoto.m */,
-				857966261CA7DD1700DB3AAB /* MGRPhoto+MGRDropboxParser.h */,
-				857966271CA7DD1700DB3AAB /* MGRPhoto+MGRDropboxParser.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -730,34 +741,35 @@
 				857965D21CA6E03500DB3AAB /* GTMSessionFetcher.m in Sources */,
 				857965CD1CA6DE5D00DB3AAB /* GTMOAuth2Authentication.m in Sources */,
 				E3298BA41C8C2A5800D337FB /* EXTADT.m in Sources */,
-				857966281CA7DD1700DB3AAB /* MGRPhoto+MGRDropboxParser.m in Sources */,
 				853B89641C9DC31300417DC5 /* MGRFolderCell.m in Sources */,
 				857965DB1CA6E60700DB3AAB /* GTMOAuth2SignIn.m in Sources */,
 				E3CD958B1C82294D00A01D79 /* MGRLoginViewController.m in Sources */,
 				853B89671C9DC32300417DC5 /* MGRPhotoCell.m in Sources */,
 				E3298BA51C8C2A5800D337FB /* EXTConcreteProtocol.m in Sources */,
-				E3CD95BC1C822EF200A01D79 /* MGRFile.m in Sources */,
 				E3298BF81C8DCEAB00D337FB /* MGRListViewController.m in Sources */,
 				E3298BFB1C8DCF0100D337FB /* MGRSinglePhotoViewController.m in Sources */,
-				857966251CA7DB0A00DB3AAB /* MGRPhoto.m in Sources */,
+				857966641CA8192100DB3AAB /* MGRMediaMetadata.m in Sources */,
 				E3298BA81C8C2A5800D337FB /* EXTSafeCategory.m in Sources */,
 				857966221CA7C8E300DB3AAB /* MGRLoginNavigationControllerDelegate.m in Sources */,
 				E3298BAF1C8C3B8900D337FB /* MGRNodesManager.m in Sources */,
+				857966731CA821D900DB3AAB /* MGRFolderMetadata.m in Sources */,
 				853B896A1C9EA69E00417DC5 /* MGRMetadataViewController.m in Sources */,
 				857965C91CA6C3E100DB3AAB /* MGRDropboxClient.m in Sources */,
 				E3298BFE1C8DCF1000D337FB /* MGRAboutViewController.m in Sources */,
-				E3CD95C31C822FC900A01D79 /* MGRAbstractNode.m in Sources */,
 				E3CD95881C82294D00A01D79 /* AppDelegate.m in Sources */,
 				E3298BAC1C8C2A5800D337FB /* NSMethodSignature+EXT.m in Sources */,
-				E3CD95BF1C822EFF00A01D79 /* MGRFolder.m in Sources */,
+				857966611CA8184A00DB3AAB /* MGRFileMetadata.m in Sources */,
 				857965DE1CA6EDD100DB3AAB /* MGRDropboxSession.m in Sources */,
-				E3CD95D01C82F5DD00A01D79 /* MGRFolder+MGRDropboxParser.m in Sources */,
+				8579666D1CA819E000DB3AAB /* MGRGPSCoordinates.m in Sources */,
+				857966761CA822A900DB3AAB /* MGRMetadata.m in Sources */,
+				857966701CA8205A00DB3AAB /* MGRDropboxParserUtilities.m in Sources */,
+				857966671CA8195300DB3AAB /* MGRPhotoMetadata.m in Sources */,
 				857965D71CA6E5EF00DB3AAB /* GTMOAuth2ViewControllerTouch.m in Sources */,
 				E3CD95851C82294D00A01D79 /* main.m in Sources */,
-				E3CD95CD1C82F20A00A01D79 /* MGRFile+MGRDropboxParser.m in Sources */,
 				E3298BAA1C8C2A5800D337FB /* EXTSelectorChecking.m in Sources */,
 				E3298BA61C8C2A5800D337FB /* EXTNil.m in Sources */,
 				E3298BAB1C8C2A5800D337FB /* NSInvocation+EXT.m in Sources */,
+				8579666A1CA8197300DB3AAB /* MGRDimensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

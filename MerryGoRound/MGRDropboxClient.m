@@ -62,7 +62,7 @@ static NSString *const MGRDropboxClientContentBaseURL = @"https://content.dropbo
                                    @"include_media_info": @(YES) }
                     resultBlock:
      ^(id  _Nullable responseObject, NSError * _Nullable error) {
-         MGRDropboxClientGetMetadataResultBlock internalResultBlock = ^(id<MGRNode> _Nullable node,
+         MGRDropboxClientGetMetadataResultBlock internalResultBlock = ^(MGRMetadata * _Nullable node,
                                                                         NSError * _Nullable error) {
              dispatch_async(dispatch_get_main_queue(), ^{
                  resultBlock(node, error);
@@ -76,7 +76,7 @@ static NSString *const MGRDropboxClientContentBaseURL = @"https://content.dropbo
 
          MGRDropboxParser *parser = [[MGRDropboxParser alloc] init];
          NSError *parseError;
-         id<MGRNode> node = [parser nodeFromJSONObject:responseObject error:&parseError];
+         MGRMetadata *node = [parser nodeFromJSONObject:responseObject error:&parseError];
          internalResultBlock(node, parseError);
      }];
 }
@@ -118,7 +118,7 @@ static NSString *const MGRDropboxClientContentBaseURL = @"https://content.dropbo
                                    @"include_media_info": @(YES) }
                     resultBlock:
      ^(id  _Nullable responseObject, NSError * _Nullable error) {
-         MGRDropboxClientListFolderResultBlock internalResultBlock = ^(NSArray<id<MGRNode>> * _Nullable nodes,
+         MGRDropboxClientListFolderResultBlock internalResultBlock = ^(NSArray<MGRMetadata *> * _Nullable nodes,
                                                                        NSError * _Nullable error) {
              dispatch_async(dispatch_get_main_queue(), ^{
                  resultBlock(nodes, error);
@@ -132,7 +132,7 @@ static NSString *const MGRDropboxClientContentBaseURL = @"https://content.dropbo
 
          MGRDropboxParser *parser = [[MGRDropboxParser alloc] init];
          NSError *parseError;
-         NSArray<id<MGRNode>> *nodes = [parser nodesFromJSONObject:responseObject error:&parseError];
+         NSArray<MGRMetadata *> *nodes = [parser nodesFromJSONObject:responseObject error:&parseError];
          internalResultBlock(nodes, parseError);
      }];
 }

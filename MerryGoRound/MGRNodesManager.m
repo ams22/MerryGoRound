@@ -11,7 +11,7 @@
 
 @interface MGRNodesManager ()
 
-@property (nonatomic, readwrite, copy) NSArray<id<MGRNode>> *nodes;
+@property (nonatomic, readwrite, copy) NSArray<MGRMetadata *> *nodes;
 
 @end
 
@@ -24,7 +24,7 @@
     return self;
 }
 
-- (void)setNodes:(NSArray<id<MGRNode>> *)nodes {
+- (void)setNodes:(NSArray<MGRMetadata *> *)nodes {
     _nodes = [nodes copy];
     [self.delegate managerDidUpdateNodes:self];
 }
