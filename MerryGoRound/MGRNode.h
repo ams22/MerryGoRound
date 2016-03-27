@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, copy) NSString *dropboxID;
 @property (nonatomic, readonly, copy) NSString *name;
 @property (nonatomic, readonly, copy) NSString *path;
+@property (nonatomic, readonly, getter=isDirectory) BOOL directory;
 
 @end
 

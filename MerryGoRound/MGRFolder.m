@@ -26,6 +26,10 @@
     return self;
 }
 
+- (BOOL)isDirectory {
+    return YES;
+}
+
 - (NSUInteger)hash {
     return [super hash] ^ self.childNodes.hash;
 }

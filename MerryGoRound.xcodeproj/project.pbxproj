@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		853B895D1C9D749B00417DC5 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853B895C1C9D749B00417DC5 /* DropboxSDK.framework */; };
 		853B89641C9DC31300417DC5 /* MGRFolderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 853B89631C9DC31300417DC5 /* MGRFolderCell.m */; };
 		853B89671C9DC32300417DC5 /* MGRPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 853B89661C9DC32300417DC5 /* MGRPhotoCell.m */; };
 		853B896A1C9EA69E00417DC5 /* MGRMetadataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 853B89691C9EA69E00417DC5 /* MGRMetadataViewController.m */; };
+		857965C91CA6C3E100DB3AAB /* MGRDropboxClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 857965C81CA6C3E100DB3AAB /* MGRDropboxClient.m */; };
 		857965CD1CA6DE5D00DB3AAB /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 857965CC1CA6DE5D00DB3AAB /* GTMOAuth2Authentication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		857965D21CA6E03500DB3AAB /* GTMSessionFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 857965D11CA6E03500DB3AAB /* GTMSessionFetcher.m */; };
 		857965D71CA6E5EF00DB3AAB /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 857965D51CA6E5EF00DB3AAB /* GTMOAuth2ViewControllerTouch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -87,13 +87,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		853B895C1C9D749B00417DC5 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
 		853B89621C9DC31300417DC5 /* MGRFolderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRFolderCell.h; sourceTree = "<group>"; };
 		853B89631C9DC31300417DC5 /* MGRFolderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRFolderCell.m; sourceTree = "<group>"; };
 		853B89651C9DC32300417DC5 /* MGRPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRPhotoCell.h; sourceTree = "<group>"; };
 		853B89661C9DC32300417DC5 /* MGRPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRPhotoCell.m; sourceTree = "<group>"; };
 		853B89681C9EA69E00417DC5 /* MGRMetadataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRMetadataViewController.h; sourceTree = "<group>"; };
 		853B89691C9EA69E00417DC5 /* MGRMetadataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRMetadataViewController.m; sourceTree = "<group>"; };
+		857965C71CA6C3E100DB3AAB /* MGRDropboxClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRDropboxClient.h; sourceTree = "<group>"; };
+		857965C81CA6C3E100DB3AAB /* MGRDropboxClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRDropboxClient.m; sourceTree = "<group>"; };
 		857965CB1CA6DE5D00DB3AAB /* GTMOAuth2Authentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2Authentication.h; sourceTree = "<group>"; };
 		857965CC1CA6DE5D00DB3AAB /* GTMOAuth2Authentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2Authentication.m; sourceTree = "<group>"; };
 		857965D01CA6E03500DB3AAB /* GTMSessionFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMSessionFetcher.h; sourceTree = "<group>"; };
@@ -205,7 +206,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				853B895D1C9D749B00417DC5 /* DropboxSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,14 +226,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		853B895B1C9D749B00417DC5 /* DropboxSDK */ = {
-			isa = PBXGroup;
-			children = (
-				853B895C1C9D749B00417DC5 /* DropboxSDK.framework */,
-			);
-			path = DropboxSDK;
-			sourceTree = "<group>";
-		};
 		853B89611C9DC2F200417DC5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,7 +273,6 @@
 		E3298B8A1C8C2A2A00D337FB /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				853B895B1C9D749B00417DC5 /* DropboxSDK */,
 				E3298B8B1C8C2A5800D337FB /* extobjc */,
 				857965CA1CA6DE3100DB3AAB /* gtm-oauth2 */,
 				857965CF1CA6E00D00DB3AAB /* gtm-session-fetcher */,
@@ -436,6 +427,8 @@
 			children = (
 				E3CD95C11C822FC900A01D79 /* MGRAbstractNode.h */,
 				E3CD95C21C822FC900A01D79 /* MGRAbstractNode.m */,
+				857965C71CA6C3E100DB3AAB /* MGRDropboxClient.h */,
+				857965C81CA6C3E100DB3AAB /* MGRDropboxClient.m */,
 				E3CD95C81C82E7AA00A01D79 /* MGRDropboxParser.h */,
 				E3CD95C91C82E7AA00A01D79 /* MGRDropboxParser.m */,
 				857965DC1CA6EDD100DB3AAB /* MGRDropboxSession.h */,
@@ -663,6 +656,7 @@
 				857966221CA7C8E300DB3AAB /* MGRLoginNavigationControllerDelegate.m in Sources */,
 				E3298BAF1C8C3B8900D337FB /* MGRNodesManager.m in Sources */,
 				853B896A1C9EA69E00417DC5 /* MGRMetadataViewController.m in Sources */,
+				857965C91CA6C3E100DB3AAB /* MGRDropboxClient.m in Sources */,
 				E3298BFE1C8DCF1000D337FB /* MGRAboutViewController.m in Sources */,
 				E3CD95C31C822FC900A01D79 /* MGRAbstractNode.m in Sources */,
 				E3CD95881C82294D00A01D79 /* AppDelegate.m in Sources */,
@@ -846,10 +840,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ThirdParty/DropboxSDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MerryGoRound/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.mail.track.MerryGoRound;
@@ -861,10 +852,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ThirdParty/DropboxSDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MerryGoRound/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.mail.track.MerryGoRound;

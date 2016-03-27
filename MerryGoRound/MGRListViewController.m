@@ -10,24 +10,24 @@
 #import "MGRSinglePhotoViewController.h"
 #import "MGRFolderCell.h"
 #import "MGRPhotoCell.h"
+#import "MGRDropboxClient.h"
+#import "EXTScope.h"
+#import "MGRFile.h"
+#import "MGRFolder.h"
 
-@interface MGRListViewController () <DBRestClientDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface MGRListViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) IBOutlet UIView *footerView;
 
-@property (nonatomic, strong) DBRestClient *client;
-@property (nonatomic, strong) DBMetadata *metadata;
-@property (nonatomic, copy) NSArray<DBMetadata *> *contents;
+@property (nonatomic, strong) MGRFolder *folder;
+@property (nonatomic, copy) NSArray<id<MGRNode>> *contents;
+@property (nonatomic, strong) MGRDropboxClient *dropbox;
 
 @end
 
 @implementation MGRListViewController
-
-- (void)dealloc {
-    [self.client cancelAllRequests];
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -47,46 +47,71 @@
     }
 
     if (self.session) {
-        self.client = [[DBRestClient alloc] initWithSession:self.session];
-        self.client.delegate = self;
+        self.dropbox = [[MGRDropboxClient alloc] initWithSession:self.session];
     }
-    if (self.path) {
-        [self.client loadMetadata:self.path];
-    }
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    [self.client cancelAllRequests];
+    [self loadFolderContents];
 }
 
 - (IBAction)unwindFromAbout:(UIStoryboardSegue *)sender {
 }
 
-- (IBAction)refresh:(id)sender {
+- (void)loadFolderContents {
     if (self.path) {
-        [self.client loadMetadata:self.path];
+        @weakify(self);
+        [self.dropbox listFolderWithPath:self.path resultBlock:
+         ^(NSArray<id<MGRNode>> * _Nullable nodes, NSError * _Nullable error) {
+             @strongify(self);
+             if (nodes) {
+                 self.contents = [nodes filteredArrayUsingPredicate:
+                                  [NSPredicate predicateWithBlock:^BOOL(id<MGRNode> _Nonnull node,
+                                                                        NSDictionary<NSString *,id> * _Nullable bindings) {
+                     return ([node isKindOfClass:[MGRFolder class]] ||
+                             ([node isKindOfClass:[MGRFile class]] &&
+                              [(MGRFile *)node isImage]));
+                 }]];
+                 [self.refreshControl endRefreshing];
+                 [self.tableView reloadData];
+             }
+         }];
+
+        if (self.path.length > 0) {
+            [self.dropbox getMetadataWithPath:self.path resultBlock:
+             ^(id<MGRNode>  _Nullable node, NSError * _Nullable error) {
+                 @strongify(self);
+                 if (node) {
+                     self.title = node.name;
+                     self.folder = node;
+                 }
+             }];
+        }
+        else {
+            self.title = @"Merry-Go-Round";
+        }
     }
+}
+
+- (IBAction)refresh:(id)sender {
+    [self loadFolderContents];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"ShowPhoto"]) {
         MGRPhotoCell *cell = sender;
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-        DBMetadata *metadata = self.contents[indexPath.row];
+        id<MGRNode> node = self.contents[indexPath.row];
 
         MGRSinglePhotoViewController *controller = segue.destinationViewController;
         controller.session = self.session;
-        controller.path = [metadata path];
+        controller.path = node.path;
     }
     else if ([segue.identifier isEqualToString:@"ShowFolder"]) {
         MGRFolderCell *cell = sender;
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-        DBMetadata *metadata = self.contents[indexPath.row];
+        id<MGRNode> node = self.contents[indexPath.row];
 
         MGRListViewController *controller = segue.destinationViewController;
         controller.session = self.session;
-        controller.path = metadata.path;
+        controller.path = node.path;
     }
 }
 
@@ -101,23 +126,19 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    DBMetadata *metadata = self.contents[indexPath.row];
-    if ([metadata isDirectory]) {
+    id<MGRNode> node = self.contents[indexPath.row];
+    if ([node isDirectory]) {
         MGRFolderCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Folder" forIndexPath:indexPath];
-        cell.titleLabel.text = metadata.filename;
-
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        dateFormatter.dateStyle = NSDateFormatterMediumStyle;
-        dateFormatter.timeStyle = NSDateFormatterNoStyle;
-
-        cell.subtitleLabel.text = [dateFormatter stringFromDate:metadata.lastModifiedDate];
-
+        cell.titleLabel.text = node.name;
+        cell.subtitleLabel.text = node.dropboxID;
         return cell;
     }
     else {
+        MGRFile *file = node;
+
         MGRPhotoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Photo" forIndexPath:indexPath];
-        if ([metadata thumbnailExists]) {
-            cell.thumbnailView.image = [UIImage imageWithContentsOfFile:[self thumbnailPathWithMetadata:metadata]];
+        if ([file isImage]) {
+            cell.thumbnailView.image = [UIImage imageWithContentsOfFile:[self thumbnailPathWithFile:file]];
         }
         else {
             cell.thumbnailView.image = nil;
@@ -128,8 +149,8 @@
         formatter.countStyle = NSByteCountFormatterCountStyleFile;
         formatter.allowsNonnumericFormatting = YES;
         formatter.adaptive = YES;
-        
-        cell.sizeLabel.text = [formatter stringFromByteCount:[metadata totalBytes]];
+
+        cell.sizeLabel.text = [formatter stringFromByteCount:file.size];
 
         return cell;
     }
@@ -160,40 +181,35 @@
     return directory;
 }
 
-- (NSString *)thumbnailPathWithMetadata:(DBMetadata *)metadata {
-    NSString *filename = [[metadata path] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@"/"].invertedSet];
+- (NSString *)thumbnailPathWithFile:(MGRFile *)file {
+    NSString *filename = [file.path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@"/"].invertedSet];
     NSString *path = [[[self thumnailsPath] stringByAppendingPathComponent:filename] stringByAppendingPathExtension:@"png"];
     return path;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    DBMetadata *metadata = self.contents[indexPath.row];
-    if ([metadata thumbnailExists]) {
-        MGRPhotoCell *photoCell = (MGRPhotoCell *)cell;
-        if (!photoCell.thumbnailView.image) {
-            [self.client loadThumbnail:metadata.path ofSize:@"m" intoPath:[self thumbnailPathWithMetadata:metadata]];
-        }
-    }
-}
-
-#pragma mark - DBRestClientDelegate
-
-- (void)restClient:(DBRestClient *)client loadedMetadata:(DBMetadata *)metadata {
-    self.title = metadata.filename;
-    self.metadata = metadata;
-    self.contents = [self.metadata.contents filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(DBMetadata *  _Nonnull metadata, NSDictionary<NSString *,id> * _Nullable bindings) {
-        return [metadata isDirectory] || [metadata thumbnailExists];
-    }]];
-    [self.refreshControl endRefreshing];
-    [self.tableView reloadData];
-}
-
-- (void)restClient:(DBRestClient *)client loadedThumbnail:(NSString *)destPath metadata:(DBMetadata *)metadata {
-    for (NSIndexPath *indexPath in self.tableView.indexPathsForVisibleRows) {
-        DBMetadata *cellMetadata = self.contents[indexPath.row];
-        if ([cellMetadata isEqual:metadata]) {
-            MGRPhotoCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-            cell.thumbnailView.image = [UIImage imageWithContentsOfFile:destPath];
+    id<MGRNode> node = self.contents[indexPath.row];
+    if ([node isKindOfClass:[MGRFile class]]) {
+        MGRFile *file = node;
+        if ([file isImage]) {
+            MGRPhotoCell *photoCell = (MGRPhotoCell *)cell;
+            if (!photoCell.thumbnailView.image) {
+                NSString *thumbnailPath = [self thumbnailPathWithFile:file];
+                @weakify(self);
+                [self.dropbox getThumbnailWithPath:file.path
+                                        saveToPath:thumbnailPath
+                                       resultBlock:
+                 ^(UIImage *image, NSError *error) {
+                     @strongify(self);
+                     for (NSIndexPath *indexPath in self.tableView.indexPathsForVisibleRows) {
+                         id<MGRNode> cellNode = self.contents[indexPath.row];
+                         if ([cellNode isEqual:file]) {
+                             MGRPhotoCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+                             cell.thumbnailView.image = image;
+                         }
+                     }
+                 }];
+            }
         }
     }
 }

@@ -7,8 +7,11 @@
 //
 
 #import "MGRMetadataViewController.h"
+#import "MGRDropboxClient.h"
+#import "MGRFile.h"
+#import "EXTScope.h"
 
-@interface MGRMetadataViewController () <DBRestClientDelegate>
+@interface MGRMetadataViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
 @property (weak, nonatomic) IBOutlet UIImageView *thumbnailView;
@@ -18,41 +21,51 @@
 @property (weak, nonatomic) IBOutlet UILabel *totalSizeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *revisionLabel;
 
-@property (nonatomic, strong) DBRestClient *client;
-@property (nonatomic, strong) DBMetadata *metadata;
+@property (nonatomic, strong) MGRDropboxClient *dropbox;
+@property (nonatomic, strong) MGRFile *file;
 
 @end
 
 @implementation MGRMetadataViewController
 
-- (void)dealloc {
-    [self.client cancelAllRequests];
-}
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
     if (self.session) {
-        self.client = [[DBRestClient alloc] initWithSession:self.session];
-        self.client.delegate = self;
+        self.dropbox = [[MGRDropboxClient alloc] initWithSession:self.session];
     }
 
     self.iconView.image = nil;
     self.thumbnailView.image = nil;
     if (self.path) {
-        UIImage *thumbnail = [UIImage imageWithContentsOfFile:[self thumbnailPathWithPath:self.path]];
+        NSString *thumnailPath = [self thumbnailPathWithPath:self.path];
+        UIImage *thumbnail = [UIImage imageWithContentsOfFile:thumnailPath];
         self.thumbnailView.image = thumbnail;
         if (!thumbnail) {
-            [self.client loadThumbnail:self.path ofSize:@"m" intoPath:[self thumbnailPathWithPath:self.path]];
+            @weakify(self);
+            [self.dropbox getThumbnailWithPath:self.path
+                                    saveToPath:thumnailPath
+                                   resultBlock:
+             ^(UIImage * _Nullable image, NSError * _Nullable error) {
+                 @strongify(self);
+                 self.thumbnailView.image = image;
+             }];
         }
 
-        [self.client loadMetadata:self.path];
+        @weakify(self);
+        [self.dropbox getMetadataWithPath:self.path resultBlock:^(id<MGRNode>  _Nullable node, NSError * _Nullable error) {
+            @strongify(self);
+            MGRFile *file = node;
+            self.file = file;
+            self.title = file.name;
+            self.iconView.image = [UIImage imageNamed:@"page_white"];
+            self.filenameLabel.text = file.name;
+            self.pathLabel.text = file.path;
+            self.lastModifiedLabel.text = [NSString stringWithFormat:@"%@", file.clientModified];
+            self.totalSizeLabel.text = [NSString stringWithFormat:@"%lu bytes", (unsigned long)file.size];
+            self.revisionLabel.text = file.dropboxID;
+        }];
     }
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    [self.client cancelAllRequests];
 }
 
 - (NSString *)thumbnailPathWithPath:(NSString *)path {
@@ -69,23 +82,6 @@
         }
     });
     return directory;
-}
-
-#pragma mark - DBRestClientDelegate
-
-- (void)restClient:(DBRestClient *)client loadedThumbnail:(NSString *)destPath {
-    self.thumbnailView.image = [UIImage imageWithContentsOfFile:destPath];
-}
-
-- (void)restClient:(DBRestClient *)client loadedMetadata:(DBMetadata *)metadata {
-    self.metadata = metadata;
-    self.title = [metadata filename];
-    self.iconView.image = [UIImage imageNamed:[metadata icon]];
-    self.filenameLabel.text = metadata.filename;
-    self.pathLabel.text = metadata.path;
-    self.lastModifiedLabel.text = [NSString stringWithFormat:@"%@", metadata.lastModifiedDate];
-    self.totalSizeLabel.text = [NSString stringWithFormat:@"%lli bytes", metadata.totalBytes];
-    self.revisionLabel.text = metadata.rev;
 }
 
 @end
