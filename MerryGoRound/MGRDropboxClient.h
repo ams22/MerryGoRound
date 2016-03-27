@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MGRNode.h"
+#import "MGRMetadata.h"
 #import "MGRDropboxSession.h"
 
 @class MPOAuthCredentialConcreteStore;
@@ -26,9 +26,9 @@ typedef NS_ENUM(NSUInteger, MGRDropboxClientErrorCode) {
 
 #define MGRDropboxClientErrorCodeServerError(code)  ((code) >= 500 && (code) <= 599)
 
-typedef void (^MGRDropboxClientListFolderResultBlock)(NSArray<id<MGRNode>> * _Nullable nodes,
+typedef void (^MGRDropboxClientListFolderResultBlock)(NSArray<__kindof MGRMetadata *> * _Nullable nodes,
                                                       NSError * _Nullable error);
-typedef void (^MGRDropboxClientGetMetadataResultBlock)(id<MGRNode> _Nullable node,
+typedef void (^MGRDropboxClientGetMetadataResultBlock)(__kindof MGRMetadata * _Nullable node,
                                                        NSError * _Nullable error);
 typedef void (^MGRDropboxClientImageResultBlock)(UIImage * _Nullable image, NSError * _Nullable error);
 typedef void (^MGRDropboxClientDataResultBlock)(NSData * _Nullable data, NSError * _Nullable error);

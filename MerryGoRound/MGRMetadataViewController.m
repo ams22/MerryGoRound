@@ -8,7 +8,7 @@
 
 #import "MGRMetadataViewController.h"
 #import "MGRDropboxClient.h"
-#import "MGRFile.h"
+#import "MGRFileMetadata.h"
 #import "EXTScope.h"
 
 @interface MGRMetadataViewController ()
@@ -22,7 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *revisionLabel;
 
 @property (nonatomic, strong) MGRDropboxClient *dropbox;
-@property (nonatomic, strong) MGRFile *file;
+@property (nonatomic, strong) MGRFileMetadata *file;
 
 @end
 
@@ -53,9 +53,8 @@
         }
 
         @weakify(self);
-        [self.dropbox getMetadataWithPath:self.path resultBlock:^(id<MGRNode>  _Nullable node, NSError * _Nullable error) {
+        [self.dropbox getMetadataWithPath:self.path resultBlock:^(MGRFileMetadata * _Nullable file, NSError * _Nullable error) {
             @strongify(self);
-            MGRFile *file = node;
             self.file = file;
             self.title = file.name;
             self.iconView.image = [UIImage imageNamed:@"page_white"];
@@ -63,7 +62,7 @@
             self.pathLabel.text = file.path;
             self.lastModifiedLabel.text = [NSString stringWithFormat:@"%@", file.clientModified];
             self.totalSizeLabel.text = [NSString stringWithFormat:@"%lu bytes", (unsigned long)file.size];
-            self.revisionLabel.text = file.dropboxID;
+            self.revisionLabel.text = file.identifier;
         }];
     }
 }
