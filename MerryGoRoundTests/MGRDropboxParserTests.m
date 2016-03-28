@@ -23,7 +23,7 @@
 - (void)testParse {
     id JSONObject = [self listFolderJSONObject];
     NSError *error;
-    NSArray<id<MGRNode>> *nodes = [self.parser nodesFromJSONObject:JSONObject error:&error];
+    NSArray<MGRMetadata *> *nodes = [self.parser nodesFromJSONObject:JSONObject error:&error];
     XCTAssertNotNil(nodes, @"%@", error);
 
 //    NSLog(@"%@", nodes);
